@@ -1,0 +1,63 @@
+PODS:
+  - Alamofire (5.8.1)
+  - Kingfisher (7.10.2)
+  - ReactorKit (3.2.0):
+    - RxSwift (~> 6.0)
+    - WeakMapTable (~> 1.1)
+  - RxCocoa (6.6.0):
+    - RxRelay (= 6.6.0)
+    - RxSwift (= 6.6.0)
+  - RxGesture (4.0.4):
+    - RxCocoa (~> 6.0)
+    - RxSwift (~> 6.0)
+  - RxRelay (6.6.0):
+    - RxSwift (= 6.6.0)
+  - RxSwift (6.6.0)
+  - RxViewController (2.0.0):
+    - RxCocoa (~> 6.0)
+    - RxSwift (~> 6.0)
+  - SnapKit (5.6.0)
+  - Then (3.0.0)
+  - WeakMapTable (1.2.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - Kingfisher
+  - ReactorKit
+  - RxCocoa
+  - RxGesture
+  - RxSwift
+  - RxViewController
+  - SnapKit
+  - Then
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - Kingfisher
+    - ReactorKit
+    - RxCocoa
+    - RxGesture
+    - RxRelay
+    - RxSwift
+    - RxViewController
+    - SnapKit
+    - Then
+    - WeakMapTable
+
+SPEC CHECKSUMS:
+  Alamofire: 3ca42e259043ee0dc5c0cdd76c4bc568b8e42af7
+  Kingfisher: 99edc495d3b7607e6425f0d6f6847b2abd6d716d
+  ReactorKit: e8b11d6b9c415405f381669b095c154a05b59eca
+  RxCocoa: 44a80de90e25b739b5aeaae3c8c371a32e3343cc
+  RxGesture: f3efb47ed2d26a8082f7b660d4a59970e275a7f8
+  RxRelay: 45eaa5db8ee4fb50e5ebd57deec0159e97fa51e6
+  RxSwift: a4b44f7d24599f674deebd1818eab82e58410632
+  RxViewController: 56486fa0afd629a1d6b5ba077f3b8cd9dc31b5d2
+  SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
+  Then: 844265ae87834bbe1147d91d5d41a404da2ec27d
+  WeakMapTable: 05c694ce8439a7a9ebabb56187287a63c57673d6
+
+PODFILE CHECKSUM: 99ff763de57770fa44a6271a0e77a49ccd6ae4a7
+
+COCOAPODS: 1.14.2

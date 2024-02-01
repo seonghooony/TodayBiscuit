@@ -1,0 +1,957 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		43F2334A24D55D990F52B942 /* Pods_TodayBiscuitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51644D8AA74A72770ECA1C87 /* Pods_TodayBiscuitTests.framework */; };
+		9BD23B2B1BA8E29BD7CFB36B /* Pods_TodayBiscuit_TodayBiscuitUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23B7A490F11DD516C4687492 /* Pods_TodayBiscuit_TodayBiscuitUITests.framework */; };
+		C14D197A836007FF10BCA96B /* Pods_TodayBiscuit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31474E862CABBC47F0660B69 /* Pods_TodayBiscuit.framework */; };
+		DB0139932B1B22E900758ADE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0139922B1B22E900758ADE /* AppDelegate.swift */; };
+		DB0139952B1B22E900758ADE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0139942B1B22E900758ADE /* SceneDelegate.swift */; };
+		DB01399D2B1B22E900758ADE /* TodayBiscuit.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DB01399B2B1B22E900758ADE /* TodayBiscuit.xcdatamodeld */; };
+		DB01399F2B1B22EA00758ADE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB01399E2B1B22EA00758ADE /* Assets.xcassets */; };
+		DB0139A22B1B22EA00758ADE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB0139A02B1B22EA00758ADE /* LaunchScreen.storyboard */; };
+		DB0139AE2B1B22EA00758ADE /* TodayBiscuitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0139AD2B1B22EA00758ADE /* TodayBiscuitTests.swift */; };
+		DB0139B82B1B22EA00758ADE /* TodayBiscuitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0139B72B1B22EA00758ADE /* TodayBiscuitUITests.swift */; };
+		DB0139BA2B1B22EA00758ADE /* TodayBiscuitUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0139B92B1B22EA00758ADE /* TodayBiscuitUITestsLaunchTests.swift */; };
+		DB0139DA2B1B35C700758ADE /* SplashViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0139D92B1B35C700758ADE /* SplashViewReactor.swift */; };
+		DB0139DE2B1B362900758ADE /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0139DD2B1B362900758ADE /* SplashViewController.swift */; };
+		DB0139E02B1B369800758ADE /* OSLog+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0139DF2B1B369800758ADE /* OSLog+Extension.swift */; };
+		DB0139E22B1B376900758ADE /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0139E12B1B376900758ADE /* Bundle+Extension.swift */; };
+		DBB5D3692B6B55C4007940C7 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = DBB5D3682B6B55C4007940C7 /* .gitignore */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DB0139AA2B1B22EA00758ADE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DB0139872B1B22E900758ADE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DB01398E2B1B22E900758ADE;
+			remoteInfo = TodayBiscuit;
+		};
+		DB0139B42B1B22EA00758ADE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DB0139872B1B22E900758ADE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DB01398E2B1B22E900758ADE;
+			remoteInfo = TodayBiscuit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0095EAF549CC07507504C609 /* Pods-TodayBiscuitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodayBiscuitTests.release.xcconfig"; path = "Target Support Files/Pods-TodayBiscuitTests/Pods-TodayBiscuitTests.release.xcconfig"; sourceTree = "<group>"; };
+		23B7A490F11DD516C4687492 /* Pods_TodayBiscuit_TodayBiscuitUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TodayBiscuit_TodayBiscuitUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		31474E862CABBC47F0660B69 /* Pods_TodayBiscuit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TodayBiscuit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		51644D8AA74A72770ECA1C87 /* Pods_TodayBiscuitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TodayBiscuitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		53CBC99F615DB62070D4EFE2 /* Pods-TodayBiscuit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodayBiscuit.debug.xcconfig"; path = "Target Support Files/Pods-TodayBiscuit/Pods-TodayBiscuit.debug.xcconfig"; sourceTree = "<group>"; };
+		80CC413ED845A36A5B00245B /* Pods-TodayBiscuit-TodayBiscuitUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodayBiscuit-TodayBiscuitUITests.release.xcconfig"; path = "Target Support Files/Pods-TodayBiscuit-TodayBiscuitUITests/Pods-TodayBiscuit-TodayBiscuitUITests.release.xcconfig"; sourceTree = "<group>"; };
+		848864E27B90168FDD45BDE2 /* Pods-TodayBiscuit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodayBiscuit.release.xcconfig"; path = "Target Support Files/Pods-TodayBiscuit/Pods-TodayBiscuit.release.xcconfig"; sourceTree = "<group>"; };
+		B81BC21EEDF9ECCD8D769D0B /* Pods-TodayBiscuit-TodayBiscuitUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodayBiscuit-TodayBiscuitUITests.debug.xcconfig"; path = "Target Support Files/Pods-TodayBiscuit-TodayBiscuitUITests/Pods-TodayBiscuit-TodayBiscuitUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		DB01398F2B1B22E900758ADE /* TodayBiscuit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodayBiscuit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB0139922B1B22E900758ADE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DB0139942B1B22E900758ADE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		DB01399C2B1B22E900758ADE /* TodayBiscuit.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TodayBiscuit.xcdatamodel; sourceTree = "<group>"; };
+		DB01399E2B1B22EA00758ADE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DB0139A12B1B22EA00758ADE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DB0139A32B1B22EA00758ADE /* TodayBiscuit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TodayBiscuit.entitlements; sourceTree = "<group>"; };
+		DB0139A42B1B22EA00758ADE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB0139A92B1B22EA00758ADE /* TodayBiscuitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TodayBiscuitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB0139AD2B1B22EA00758ADE /* TodayBiscuitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayBiscuitTests.swift; sourceTree = "<group>"; };
+		DB0139B32B1B22EA00758ADE /* TodayBiscuitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TodayBiscuitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB0139B72B1B22EA00758ADE /* TodayBiscuitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayBiscuitUITests.swift; sourceTree = "<group>"; };
+		DB0139B92B1B22EA00758ADE /* TodayBiscuitUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayBiscuitUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		DB0139D92B1B35C700758ADE /* SplashViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SplashViewReactor.swift; path = TodayBiscuit/Presentation/Reactor/Splash/SplashViewReactor.swift; sourceTree = SOURCE_ROOT; };
+		DB0139DD2B1B362900758ADE /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		DB0139DF2B1B369800758ADE /* OSLog+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OSLog+Extension.swift"; sourceTree = "<group>"; };
+		DB0139E12B1B376900758ADE /* Bundle+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
+		DBB5D3682B6B55C4007940C7 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		DBB5D36A2B6B5729007940C7 /* Secrets.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Secrets.xcconfig; sourceTree = "<group>"; };
+		FFF986AAAFF9C86C80E65CB9 /* Pods-TodayBiscuitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodayBiscuitTests.debug.xcconfig"; path = "Target Support Files/Pods-TodayBiscuitTests/Pods-TodayBiscuitTests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DB01398C2B1B22E900758ADE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C14D197A836007FF10BCA96B /* Pods_TodayBiscuit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB0139A62B1B22EA00758ADE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43F2334A24D55D990F52B942 /* Pods_TodayBiscuitTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB0139B02B1B22EA00758ADE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BD23B2B1BA8E29BD7CFB36B /* Pods_TodayBiscuit_TodayBiscuitUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		474ECE96B44B337FAEAD784A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				31474E862CABBC47F0660B69 /* Pods_TodayBiscuit.framework */,
+				23B7A490F11DD516C4687492 /* Pods_TodayBiscuit_TodayBiscuitUITests.framework */,
+				51644D8AA74A72770ECA1C87 /* Pods_TodayBiscuitTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B7D692224D98519C8ED2E49A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				53CBC99F615DB62070D4EFE2 /* Pods-TodayBiscuit.debug.xcconfig */,
+				848864E27B90168FDD45BDE2 /* Pods-TodayBiscuit.release.xcconfig */,
+				B81BC21EEDF9ECCD8D769D0B /* Pods-TodayBiscuit-TodayBiscuitUITests.debug.xcconfig */,
+				80CC413ED845A36A5B00245B /* Pods-TodayBiscuit-TodayBiscuitUITests.release.xcconfig */,
+				FFF986AAAFF9C86C80E65CB9 /* Pods-TodayBiscuitTests.debug.xcconfig */,
+				0095EAF549CC07507504C609 /* Pods-TodayBiscuitTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		DB0139862B1B22E900758ADE = {
+			isa = PBXGroup;
+			children = (
+				DBB5D36A2B6B5729007940C7 /* Secrets.xcconfig */,
+				DBB5D3682B6B55C4007940C7 /* .gitignore */,
+				DB0139912B1B22E900758ADE /* TodayBiscuit */,
+				DB0139AC2B1B22EA00758ADE /* TodayBiscuitTests */,
+				DB0139B62B1B22EA00758ADE /* TodayBiscuitUITests */,
+				DB0139902B1B22E900758ADE /* Products */,
+				B7D692224D98519C8ED2E49A /* Pods */,
+				474ECE96B44B337FAEAD784A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		DB0139902B1B22E900758ADE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DB01398F2B1B22E900758ADE /* TodayBiscuit.app */,
+				DB0139A92B1B22EA00758ADE /* TodayBiscuitTests.xctest */,
+				DB0139B32B1B22EA00758ADE /* TodayBiscuitUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DB0139912B1B22E900758ADE /* TodayBiscuit */ = {
+			isa = PBXGroup;
+			children = (
+				DB0139D52B1B298E00758ADE /* Common */,
+				DB0139D02B1B290700758ADE /* Presentation */,
+				DB0139CC2B1B28C100758ADE /* Domain */,
+				DB0139C82B1B28A300758ADE /* Data */,
+				DB0139C62B1B286E00758ADE /* Resource */,
+				DB0139922B1B22E900758ADE /* AppDelegate.swift */,
+				DB0139942B1B22E900758ADE /* SceneDelegate.swift */,
+				DB01399E2B1B22EA00758ADE /* Assets.xcassets */,
+				DB0139A02B1B22EA00758ADE /* LaunchScreen.storyboard */,
+				DB0139A32B1B22EA00758ADE /* TodayBiscuit.entitlements */,
+				DB0139A42B1B22EA00758ADE /* Info.plist */,
+				DB01399B2B1B22E900758ADE /* TodayBiscuit.xcdatamodeld */,
+			);
+			path = TodayBiscuit;
+			sourceTree = "<group>";
+		};
+		DB0139AC2B1B22EA00758ADE /* TodayBiscuitTests */ = {
+			isa = PBXGroup;
+			children = (
+				DB0139AD2B1B22EA00758ADE /* TodayBiscuitTests.swift */,
+			);
+			path = TodayBiscuitTests;
+			sourceTree = "<group>";
+		};
+		DB0139B62B1B22EA00758ADE /* TodayBiscuitUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DB0139B72B1B22EA00758ADE /* TodayBiscuitUITests.swift */,
+				DB0139B92B1B22EA00758ADE /* TodayBiscuitUITestsLaunchTests.swift */,
+			);
+			path = TodayBiscuitUITests;
+			sourceTree = "<group>";
+		};
+		DB0139C62B1B286E00758ADE /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				DB0139C72B1B288000758ADE /* Strings */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		DB0139C72B1B288000758ADE /* Strings */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Strings;
+			sourceTree = "<group>";
+		};
+		DB0139C82B1B28A300758ADE /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				DB0139C92B1B28A900758ADE /* Interface */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		DB0139C92B1B28A900758ADE /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				DB0139CA2B1B28AF00758ADE /* Repository */,
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
+		DB0139CA2B1B28AF00758ADE /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				DB0139CB2B1B28B900758ADE /* Main */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		DB0139CB2B1B28B900758ADE /* Main */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		DB0139CC2B1B28C100758ADE /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				DB0139CD2B1B28CD00758ADE /* UseCase */,
+				DB0139CE2B1B28EE00758ADE /* Entity */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		DB0139CD2B1B28CD00758ADE /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				DB0139CF2B1B28FE00758ADE /* Main */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		DB0139CE2B1B28EE00758ADE /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		DB0139CF2B1B28FE00758ADE /* Main */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		DB0139D02B1B290700758ADE /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				DB0139D12B1B291800758ADE /* Flow */,
+				DB0139D22B1B292400758ADE /* ViewController */,
+				DB0139D32B1B293200758ADE /* Reactor */,
+				DB0139D42B1B294600758ADE /* View */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		DB0139D12B1B291800758ADE /* Flow */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Flow;
+			sourceTree = "<group>";
+		};
+		DB0139D22B1B292400758ADE /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DB0139DC2B1B361700758ADE /* Splash */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		DB0139D32B1B293200758ADE /* Reactor */ = {
+			isa = PBXGroup;
+			children = (
+				DB0139DB2B1B360E00758ADE /* Splash */,
+			);
+			path = Reactor;
+			sourceTree = "<group>";
+		};
+		DB0139D42B1B294600758ADE /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DB0139D52B1B298E00758ADE /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				DB0139D62B1B299500758ADE /* Extension */,
+				DB0139D72B1B299B00758ADE /* Util */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		DB0139D62B1B299500758ADE /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				DB0139DF2B1B369800758ADE /* OSLog+Extension.swift */,
+				DB0139E12B1B376900758ADE /* Bundle+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		DB0139D72B1B299B00758ADE /* Util */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		DB0139DB2B1B360E00758ADE /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				DB0139D92B1B35C700758ADE /* SplashViewReactor.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		DB0139DC2B1B361700758ADE /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				DB0139DD2B1B362900758ADE /* SplashViewController.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DB01398E2B1B22E900758ADE /* TodayBiscuit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DB0139BD2B1B22EA00758ADE /* Build configuration list for PBXNativeTarget "TodayBiscuit" */;
+			buildPhases = (
+				B46D4FE49DFAAFD113CA9BB8 /* [CP] Check Pods Manifest.lock */,
+				DB01398B2B1B22E900758ADE /* Sources */,
+				DB01398C2B1B22E900758ADE /* Frameworks */,
+				DB01398D2B1B22E900758ADE /* Resources */,
+				2A8096F65DCDF76BDC31F090 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TodayBiscuit;
+			productName = TodayBiscuit;
+			productReference = DB01398F2B1B22E900758ADE /* TodayBiscuit.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DB0139A82B1B22EA00758ADE /* TodayBiscuitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DB0139C02B1B22EA00758ADE /* Build configuration list for PBXNativeTarget "TodayBiscuitTests" */;
+			buildPhases = (
+				16CBED8777D319C516E974E6 /* [CP] Check Pods Manifest.lock */,
+				DB0139A52B1B22EA00758ADE /* Sources */,
+				DB0139A62B1B22EA00758ADE /* Frameworks */,
+				DB0139A72B1B22EA00758ADE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DB0139AB2B1B22EA00758ADE /* PBXTargetDependency */,
+			);
+			name = TodayBiscuitTests;
+			productName = TodayBiscuitTests;
+			productReference = DB0139A92B1B22EA00758ADE /* TodayBiscuitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DB0139B22B1B22EA00758ADE /* TodayBiscuitUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DB0139C32B1B22EA00758ADE /* Build configuration list for PBXNativeTarget "TodayBiscuitUITests" */;
+			buildPhases = (
+				72ABBB50347E423D42B4BCAB /* [CP] Check Pods Manifest.lock */,
+				DB0139AF2B1B22EA00758ADE /* Sources */,
+				DB0139B02B1B22EA00758ADE /* Frameworks */,
+				DB0139B12B1B22EA00758ADE /* Resources */,
+				41AF1A7FC926951065150537 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DB0139B52B1B22EA00758ADE /* PBXTargetDependency */,
+			);
+			name = TodayBiscuitUITests;
+			productName = TodayBiscuitUITests;
+			productReference = DB0139B32B1B22EA00758ADE /* TodayBiscuitUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DB0139872B1B22E900758ADE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					DB01398E2B1B22E900758ADE = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
+					DB0139A82B1B22EA00758ADE = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = DB01398E2B1B22E900758ADE;
+					};
+					DB0139B22B1B22EA00758ADE = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = DB01398E2B1B22E900758ADE;
+					};
+				};
+			};
+			buildConfigurationList = DB01398A2B1B22E900758ADE /* Build configuration list for PBXProject "TodayBiscuit" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DB0139862B1B22E900758ADE;
+			productRefGroup = DB0139902B1B22E900758ADE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DB01398E2B1B22E900758ADE /* TodayBiscuit */,
+				DB0139A82B1B22EA00758ADE /* TodayBiscuitTests */,
+				DB0139B22B1B22EA00758ADE /* TodayBiscuitUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DB01398D2B1B22E900758ADE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB0139A22B1B22EA00758ADE /* LaunchScreen.storyboard in Resources */,
+				DBB5D3692B6B55C4007940C7 /* .gitignore in Resources */,
+				DB01399F2B1B22EA00758ADE /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB0139A72B1B22EA00758ADE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB0139B12B1B22EA00758ADE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		16CBED8777D319C516E974E6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TodayBiscuitTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2A8096F65DCDF76BDC31F090 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TodayBiscuit/Pods-TodayBiscuit-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TodayBiscuit/Pods-TodayBiscuit-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TodayBiscuit/Pods-TodayBiscuit-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		41AF1A7FC926951065150537 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TodayBiscuit-TodayBiscuitUITests/Pods-TodayBiscuit-TodayBiscuitUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TodayBiscuit-TodayBiscuitUITests/Pods-TodayBiscuit-TodayBiscuitUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TodayBiscuit-TodayBiscuitUITests/Pods-TodayBiscuit-TodayBiscuitUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		72ABBB50347E423D42B4BCAB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TodayBiscuit-TodayBiscuitUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B46D4FE49DFAAFD113CA9BB8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TodayBiscuit-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DB01398B2B1B22E900758ADE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB0139E02B1B369800758ADE /* OSLog+Extension.swift in Sources */,
+				DB0139E22B1B376900758ADE /* Bundle+Extension.swift in Sources */,
+				DB0139DA2B1B35C700758ADE /* SplashViewReactor.swift in Sources */,
+				DB01399D2B1B22E900758ADE /* TodayBiscuit.xcdatamodeld in Sources */,
+				DB0139932B1B22E900758ADE /* AppDelegate.swift in Sources */,
+				DB0139952B1B22E900758ADE /* SceneDelegate.swift in Sources */,
+				DB0139DE2B1B362900758ADE /* SplashViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB0139A52B1B22EA00758ADE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB0139AE2B1B22EA00758ADE /* TodayBiscuitTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB0139AF2B1B22EA00758ADE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB0139BA2B1B22EA00758ADE /* TodayBiscuitUITestsLaunchTests.swift in Sources */,
+				DB0139B82B1B22EA00758ADE /* TodayBiscuitUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DB0139AB2B1B22EA00758ADE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DB01398E2B1B22E900758ADE /* TodayBiscuit */;
+			targetProxy = DB0139AA2B1B22EA00758ADE /* PBXContainerItemProxy */;
+		};
+		DB0139B52B1B22EA00758ADE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DB01398E2B1B22E900758ADE /* TodayBiscuit */;
+			targetProxy = DB0139B42B1B22EA00758ADE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DB0139A02B1B22EA00758ADE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DB0139A12B1B22EA00758ADE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DB0139BB2B1B22EA00758ADE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DB0139BC2B1B22EA00758ADE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DB0139BE2B1B22EA00758ADE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 53CBC99F615DB62070D4EFE2 /* Pods-TodayBiscuit.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TodayBiscuit/TodayBiscuit.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 240129001;
+				DEVELOPMENT_TEAM = H95MAPX5SG;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TodayBiscuit/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.weather";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.LucasBlue.TodayBiscuit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DB0139BF2B1B22EA00758ADE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 848864E27B90168FDD45BDE2 /* Pods-TodayBiscuit.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TodayBiscuit/TodayBiscuit.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 240129001;
+				DEVELOPMENT_TEAM = H95MAPX5SG;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TodayBiscuit/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.weather";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.LucasBlue.TodayBiscuit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		DB0139C12B1B22EA00758ADE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FFF986AAAFF9C86C80E65CB9 /* Pods-TodayBiscuitTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = H95MAPX5SG;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.LucasBlue.TodayBiscuitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TodayBiscuit.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TodayBiscuit";
+			};
+			name = Debug;
+		};
+		DB0139C22B1B22EA00758ADE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0095EAF549CC07507504C609 /* Pods-TodayBiscuitTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = H95MAPX5SG;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.LucasBlue.TodayBiscuitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TodayBiscuit.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TodayBiscuit";
+			};
+			name = Release;
+		};
+		DB0139C42B1B22EA00758ADE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B81BC21EEDF9ECCD8D769D0B /* Pods-TodayBiscuit-TodayBiscuitUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = H95MAPX5SG;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.LucasBlue.TodayBiscuitUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TodayBiscuit;
+			};
+			name = Debug;
+		};
+		DB0139C52B1B22EA00758ADE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 80CC413ED845A36A5B00245B /* Pods-TodayBiscuit-TodayBiscuitUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = H95MAPX5SG;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.LucasBlue.TodayBiscuitUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TodayBiscuit;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DB01398A2B1B22E900758ADE /* Build configuration list for PBXProject "TodayBiscuit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB0139BB2B1B22EA00758ADE /* Debug */,
+				DB0139BC2B1B22EA00758ADE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DB0139BD2B1B22EA00758ADE /* Build configuration list for PBXNativeTarget "TodayBiscuit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB0139BE2B1B22EA00758ADE /* Debug */,
+				DB0139BF2B1B22EA00758ADE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DB0139C02B1B22EA00758ADE /* Build configuration list for PBXNativeTarget "TodayBiscuitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB0139C12B1B22EA00758ADE /* Debug */,
+				DB0139C22B1B22EA00758ADE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DB0139C32B1B22EA00758ADE /* Build configuration list for PBXNativeTarget "TodayBiscuitUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB0139C42B1B22EA00758ADE /* Debug */,
+				DB0139C52B1B22EA00758ADE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		DB01399B2B1B22E900758ADE /* TodayBiscuit.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DB01399C2B1B22E900758ADE /* TodayBiscuit.xcdatamodel */,
+			);
+			currentVersion = DB01399C2B1B22E900758ADE /* TodayBiscuit.xcdatamodel */;
+			path = TodayBiscuit.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = DB0139872B1B22E900758ADE /* Project object */;
+}
