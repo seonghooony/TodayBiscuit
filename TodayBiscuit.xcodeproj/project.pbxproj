@@ -22,6 +22,9 @@
 		DB0139DE2B1B362900758ADE /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0139DD2B1B362900758ADE /* SplashViewController.swift */; };
 		DB0139E02B1B369800758ADE /* OSLog+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0139DF2B1B369800758ADE /* OSLog+Extension.swift */; };
 		DB0139E22B1B376900758ADE /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0139E12B1B376900758ADE /* Bundle+Extension.swift */; };
+		DB612B602B6CD75800E204F6 /* ASSBaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB612B5F2B6CD75800E204F6 /* ASSBaseResponse.swift */; };
+		DB612B622B6CDF4200E204F6 /* MinuDustFrcstDspthItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB612B612B6CDF4200E204F6 /* MinuDustFrcstDspthItem.swift */; };
+		DB612B642B6CDF5F00E204F6 /* MinuDustWeekFrcstDspthItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB612B632B6CDF5F00E204F6 /* MinuDustWeekFrcstDspthItem.swift */; };
 		DBB5D3692B6B55C4007940C7 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = DBB5D3682B6B55C4007940C7 /* .gitignore */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +71,9 @@
 		DB0139DD2B1B362900758ADE /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		DB0139DF2B1B369800758ADE /* OSLog+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OSLog+Extension.swift"; sourceTree = "<group>"; };
 		DB0139E12B1B376900758ADE /* Bundle+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
+		DB612B5F2B6CD75800E204F6 /* ASSBaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASSBaseResponse.swift; sourceTree = "<group>"; };
+		DB612B612B6CDF4200E204F6 /* MinuDustFrcstDspthItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinuDustFrcstDspthItem.swift; sourceTree = "<group>"; };
+		DB612B632B6CDF5F00E204F6 /* MinuDustWeekFrcstDspthItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinuDustWeekFrcstDspthItem.swift; sourceTree = "<group>"; };
 		DBB5D3682B6B55C4007940C7 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		DBB5D36A2B6B5729007940C7 /* Secrets.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Secrets.xcconfig; sourceTree = "<group>"; };
 		FFF986AAAFF9C86C80E65CB9 /* Pods-TodayBiscuitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodayBiscuitTests.debug.xcconfig"; path = "Target Support Files/Pods-TodayBiscuitTests/Pods-TodayBiscuitTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -151,6 +157,7 @@
 		DB0139912B1B22E900758ADE /* TodayBiscuit */ = {
 			isa = PBXGroup;
 			children = (
+				DB612B5C2B6CB48500E204F6 /* Application */,
 				DB0139D52B1B298E00758ADE /* Common */,
 				DB0139D02B1B290700758ADE /* Presentation */,
 				DB0139CC2B1B28C100758ADE /* Domain */,
@@ -202,7 +209,9 @@
 		DB0139C82B1B28A300758ADE /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				DB0139C92B1B28A900758ADE /* Interface */,
+				DB612B5B2B6CB23400E204F6 /* Repositories */,
+				DB612B5A2B6CB21E00E204F6 /* Network */,
+				DB612B582B6CB1DF00E204F6 /* PersistentStorages */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -218,16 +227,8 @@
 		DB0139CA2B1B28AF00758ADE /* Repository */ = {
 			isa = PBXGroup;
 			children = (
-				DB0139CB2B1B28B900758ADE /* Main */,
 			);
 			path = Repository;
-			sourceTree = "<group>";
-		};
-		DB0139CB2B1B28B900758ADE /* Main */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Main;
 			sourceTree = "<group>";
 		};
 		DB0139CC2B1B28C100758ADE /* Domain */ = {
@@ -235,6 +236,7 @@
 			children = (
 				DB0139CD2B1B28CD00758ADE /* UseCase */,
 				DB0139CE2B1B28EE00758ADE /* Entity */,
+				DB0139C92B1B28A900758ADE /* Interface */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -250,6 +252,7 @@
 		DB0139CE2B1B28EE00758ADE /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				DB612B5E2B6CD6CE00E204F6 /* ArpltnStatsSvc_API */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -341,6 +344,52 @@
 				DB0139DD2B1B362900758ADE /* SplashViewController.swift */,
 			);
 			path = Splash;
+			sourceTree = "<group>";
+		};
+		DB612B582B6CB1DF00E204F6 /* PersistentStorages */ = {
+			isa = PBXGroup;
+			children = (
+				DB612B592B6CB20300E204F6 /* CoreDataStorage */,
+			);
+			path = PersistentStorages;
+			sourceTree = "<group>";
+		};
+		DB612B592B6CB20300E204F6 /* CoreDataStorage */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CoreDataStorage;
+			sourceTree = "<group>";
+		};
+		DB612B5A2B6CB21E00E204F6 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		DB612B5B2B6CB23400E204F6 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		DB612B5C2B6CB48500E204F6 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		DB612B5E2B6CD6CE00E204F6 /* ArpltnStatsSvc_API */ = {
+			isa = PBXGroup;
+			children = (
+				DB612B5F2B6CD75800E204F6 /* ASSBaseResponse.swift */,
+				DB612B612B6CDF4200E204F6 /* MinuDustFrcstDspthItem.swift */,
+				DB612B632B6CDF5F00E204F6 /* MinuDustWeekFrcstDspthItem.swift */,
+			);
+			path = ArpltnStatsSvc_API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -583,8 +632,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB0139E02B1B369800758ADE /* OSLog+Extension.swift in Sources */,
+				DB612B602B6CD75800E204F6 /* ASSBaseResponse.swift in Sources */,
 				DB0139E22B1B376900758ADE /* Bundle+Extension.swift in Sources */,
 				DB0139DA2B1B35C700758ADE /* SplashViewReactor.swift in Sources */,
+				DB612B642B6CDF5F00E204F6 /* MinuDustWeekFrcstDspthItem.swift in Sources */,
+				DB612B622B6CDF4200E204F6 /* MinuDustFrcstDspthItem.swift in Sources */,
 				DB01399D2B1B22E900758ADE /* TodayBiscuit.xcdatamodeld in Sources */,
 				DB0139932B1B22E900758ADE /* AppDelegate.swift in Sources */,
 				DB0139952B1B22E900758ADE /* SceneDelegate.swift in Sources */,

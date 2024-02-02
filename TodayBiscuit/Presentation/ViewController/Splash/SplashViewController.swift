@@ -76,6 +76,10 @@ class SplashViewController: UIViewController, ReactorKit.View {
         
         constraintConfigure()
         
+//        var a = ASSBaseResponse<MinuDustFrcstDspthData>(response: nil)
+        
+//        a.response?.body?.items?[0].
+        
     }
     
     /*
