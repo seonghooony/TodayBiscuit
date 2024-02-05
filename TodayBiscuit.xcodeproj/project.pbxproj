@@ -25,6 +25,13 @@
 		DB612B602B6CD75800E204F6 /* ASSBaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB612B5F2B6CD75800E204F6 /* ASSBaseResponse.swift */; };
 		DB612B622B6CDF4200E204F6 /* MinuDustFrcstDspthItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB612B612B6CDF4200E204F6 /* MinuDustFrcstDspthItem.swift */; };
 		DB612B642B6CDF5F00E204F6 /* MinuDustWeekFrcstDspthItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB612B632B6CDF5F00E204F6 /* MinuDustWeekFrcstDspthItem.swift */; };
+		DB612B662B706F0400E204F6 /* MsrstnAcctoRltmMesureDnstyItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB612B652B706F0400E204F6 /* MsrstnAcctoRltmMesureDnstyItem.swift */; };
+		DB612B682B7070D700E204F6 /* UnityAirEnvrnIdexSnstiveAboveMsrstnListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB612B672B7070D700E204F6 /* UnityAirEnvrnIdexSnstiveAboveMsrstnListItem.swift */; };
+		DB612B6A2B70717100E204F6 /* CtprvnRltmMesureDnstyItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB612B692B70717100E204F6 /* CtprvnRltmMesureDnstyItem.swift */; };
+		DB612B6D2B70774D00E204F6 /* MsrstnListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB612B6C2B70774D00E204F6 /* MsrstnListItem.swift */; };
+		DB612B6F2B70779300E204F6 /* MIISBaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB612B6E2B70779300E204F6 /* MIISBaseResponse.swift */; };
+		DB612B712B70789600E204F6 /* NearbyMsrstnListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB612B702B70789600E204F6 /* NearbyMsrstnListItem.swift */; };
+		DB612B732B7078FE00E204F6 /* TMStdrCrdntItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB612B722B7078FE00E204F6 /* TMStdrCrdntItem.swift */; };
 		DBB5D3692B6B55C4007940C7 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = DBB5D3682B6B55C4007940C7 /* .gitignore */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +81,13 @@
 		DB612B5F2B6CD75800E204F6 /* ASSBaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASSBaseResponse.swift; sourceTree = "<group>"; };
 		DB612B612B6CDF4200E204F6 /* MinuDustFrcstDspthItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinuDustFrcstDspthItem.swift; sourceTree = "<group>"; };
 		DB612B632B6CDF5F00E204F6 /* MinuDustWeekFrcstDspthItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinuDustWeekFrcstDspthItem.swift; sourceTree = "<group>"; };
+		DB612B652B706F0400E204F6 /* MsrstnAcctoRltmMesureDnstyItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MsrstnAcctoRltmMesureDnstyItem.swift; sourceTree = "<group>"; };
+		DB612B672B7070D700E204F6 /* UnityAirEnvrnIdexSnstiveAboveMsrstnListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnityAirEnvrnIdexSnstiveAboveMsrstnListItem.swift; sourceTree = "<group>"; };
+		DB612B692B70717100E204F6 /* CtprvnRltmMesureDnstyItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CtprvnRltmMesureDnstyItem.swift; sourceTree = "<group>"; };
+		DB612B6C2B70774D00E204F6 /* MsrstnListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MsrstnListItem.swift; sourceTree = "<group>"; };
+		DB612B6E2B70779300E204F6 /* MIISBaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIISBaseResponse.swift; sourceTree = "<group>"; };
+		DB612B702B70789600E204F6 /* NearbyMsrstnListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyMsrstnListItem.swift; sourceTree = "<group>"; };
+		DB612B722B7078FE00E204F6 /* TMStdrCrdntItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMStdrCrdntItem.swift; sourceTree = "<group>"; };
 		DBB5D3682B6B55C4007940C7 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		DBB5D36A2B6B5729007940C7 /* Secrets.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Secrets.xcconfig; sourceTree = "<group>"; };
 		FFF986AAAFF9C86C80E65CB9 /* Pods-TodayBiscuitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodayBiscuitTests.debug.xcconfig"; path = "Target Support Files/Pods-TodayBiscuitTests/Pods-TodayBiscuitTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -253,6 +267,7 @@
 			isa = PBXGroup;
 			children = (
 				DB612B5E2B6CD6CE00E204F6 /* ArpltnStatsSvc_API */,
+				DB612B6B2B70771000E204F6 /* MsrstnInfoInqireSvc_API */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -388,8 +403,22 @@
 				DB612B5F2B6CD75800E204F6 /* ASSBaseResponse.swift */,
 				DB612B612B6CDF4200E204F6 /* MinuDustFrcstDspthItem.swift */,
 				DB612B632B6CDF5F00E204F6 /* MinuDustWeekFrcstDspthItem.swift */,
+				DB612B652B706F0400E204F6 /* MsrstnAcctoRltmMesureDnstyItem.swift */,
+				DB612B672B7070D700E204F6 /* UnityAirEnvrnIdexSnstiveAboveMsrstnListItem.swift */,
+				DB612B692B70717100E204F6 /* CtprvnRltmMesureDnstyItem.swift */,
 			);
 			path = ArpltnStatsSvc_API;
+			sourceTree = "<group>";
+		};
+		DB612B6B2B70771000E204F6 /* MsrstnInfoInqireSvc_API */ = {
+			isa = PBXGroup;
+			children = (
+				DB612B6E2B70779300E204F6 /* MIISBaseResponse.swift */,
+				DB612B6C2B70774D00E204F6 /* MsrstnListItem.swift */,
+				DB612B702B70789600E204F6 /* NearbyMsrstnListItem.swift */,
+				DB612B722B7078FE00E204F6 /* TMStdrCrdntItem.swift */,
+			);
+			path = MsrstnInfoInqireSvc_API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -634,13 +663,20 @@
 				DB0139E02B1B369800758ADE /* OSLog+Extension.swift in Sources */,
 				DB612B602B6CD75800E204F6 /* ASSBaseResponse.swift in Sources */,
 				DB0139E22B1B376900758ADE /* Bundle+Extension.swift in Sources */,
+				DB612B6D2B70774D00E204F6 /* MsrstnListItem.swift in Sources */,
+				DB612B682B7070D700E204F6 /* UnityAirEnvrnIdexSnstiveAboveMsrstnListItem.swift in Sources */,
+				DB612B712B70789600E204F6 /* NearbyMsrstnListItem.swift in Sources */,
 				DB0139DA2B1B35C700758ADE /* SplashViewReactor.swift in Sources */,
 				DB612B642B6CDF5F00E204F6 /* MinuDustWeekFrcstDspthItem.swift in Sources */,
+				DB612B6A2B70717100E204F6 /* CtprvnRltmMesureDnstyItem.swift in Sources */,
+				DB612B6F2B70779300E204F6 /* MIISBaseResponse.swift in Sources */,
 				DB612B622B6CDF4200E204F6 /* MinuDustFrcstDspthItem.swift in Sources */,
 				DB01399D2B1B22E900758ADE /* TodayBiscuit.xcdatamodeld in Sources */,
 				DB0139932B1B22E900758ADE /* AppDelegate.swift in Sources */,
 				DB0139952B1B22E900758ADE /* SceneDelegate.swift in Sources */,
+				DB612B732B7078FE00E204F6 /* TMStdrCrdntItem.swift in Sources */,
 				DB0139DE2B1B362900758ADE /* SplashViewController.swift in Sources */,
+				DB612B662B706F0400E204F6 /* MsrstnAcctoRltmMesureDnstyItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,5 +1,5 @@
 //
-//  MinuDustFrcstDspthData.swift
+//  MinuDustFrcstDspthItem.swift
 //  TodayBiscuit
 //
 //  Created by seonghoonkim on 2/2/24.
@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct MinuDustFrcstDspthData: Codable {
+/// 통보코드와 통보시간으로 예보정보와 발생 원인 정보를 조회하는 대기질(미세먼지/오존) 예보통보 조회
+struct MinuDustFrcstDspthItem: Codable {
     /**
      통보시간
      
