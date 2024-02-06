@@ -58,7 +58,7 @@ class SplashViewController: UIViewController, ReactorKit.View {
             })
             .disposed(by: disposeBag)
         
-        
+        //
 //        a.response?.body?.items?[0].
     }
     
