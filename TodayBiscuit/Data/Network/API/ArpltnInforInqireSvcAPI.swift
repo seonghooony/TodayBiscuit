@@ -1,5 +1,5 @@
 //
-//  ArpltnStatsSvcAPI.swift
+//  ArpltnInforInqireSvcAPI.swift
 //  TodayBiscuit
 //
 //  Created by seonghoonkim on 2/6/24.
@@ -11,20 +11,20 @@ import RxSwift
 import Alamofire
 
 
-public enum ArpltnStatsSvcAPI {
+public enum ArpltnInforInqireSvcAPI {
     /// 대기질예보통보조회
     case getMinuDustFrcstDspth(sid: String)
     /// 초미세먼지주간예보조회(안쓸예정)
     case getMinuDustWeekFrcstDspth(sid: String)
     /// 측정소별 실시간 측정정보 조회(주 메인)
-    case getCtprvnRltmMesureDnsty(sid: String)
+    case getMsrstnAcctoRltmMesureDnsty(sid: String)
     /// 통합대기환경지수 나쁨 이상 측정소 목록조회(안쓸예정)
     case getUnityAirEnvrnIdexSnstiveAboveMsrstnList(sid: String)
     /// 시도별 실시간 측정정보 조회 (지도메인)
-    case getMsrstnAcctoRltmMesureDnsty(sid: String)
+    case getCtprvnRltmMesureDnsty(sid: String)
 }
 
-extension ArpltnStatsSvcAPI: BaseAPIRouter, URLRequestConvertible {
+extension ArpltnInforInqireSvcAPI: BaseAPIRouter, URLRequestConvertible {
     // Base Url
     public var baseURL: String {
         return "http://apis.data.go.kr/B552584/ArpltnInforInqireSvc"
@@ -37,12 +37,12 @@ extension ArpltnStatsSvcAPI: BaseAPIRouter, URLRequestConvertible {
             return "/getMinuDustFrcstDspth"
         case .getMinuDustWeekFrcstDspth:
             return "/getMinuDustWeekFrcstDspth"
-        case .getCtprvnRltmMesureDnsty:
-            return "/getCtprvnRltmMesureDnsty"
-        case .getUnityAirEnvrnIdexSnstiveAboveMsrstnList:
-            return "/getUnityAirEnvrnIdexSnstiveAboveMsrstnList"
         case .getMsrstnAcctoRltmMesureDnsty:
             return "/getMsrstnAcctoRltmMesureDnsty"
+        case .getUnityAirEnvrnIdexSnstiveAboveMsrstnList:
+            return "/getUnityAirEnvrnIdexSnstiveAboveMsrstnList"
+        case .getCtprvnRltmMesureDnsty:
+            return "/getCtprvnRltmMesureDnsty"
         }
     }
     
@@ -51,9 +51,9 @@ extension ArpltnStatsSvcAPI: BaseAPIRouter, URLRequestConvertible {
         switch self {
         case .getMinuDustFrcstDspth,
                 .getMinuDustWeekFrcstDspth,
-                .getCtprvnRltmMesureDnsty,
+                .getMsrstnAcctoRltmMesureDnsty,
                 .getUnityAirEnvrnIdexSnstiveAboveMsrstnList,
-                .getMsrstnAcctoRltmMesureDnsty:
+                .getCtprvnRltmMesureDnsty:
             return .get
         }
     }
@@ -81,7 +81,7 @@ extension ArpltnStatsSvcAPI: BaseAPIRouter, URLRequestConvertible {
                 "returnType" : "json",
                 //"numOfRows" : "9999",
                 //"pageNo" : "1",
-                "searchDate" : "2024-02-05",
+                "searchDate" : "2024-02-06",
                 //"InformCode" : "PM10",
                 "ver" : "1.1"
             ]
@@ -96,7 +96,7 @@ extension ArpltnStatsSvcAPI: BaseAPIRouter, URLRequestConvertible {
             ]
 
             
-        case let .getCtprvnRltmMesureDnsty(sid):
+        case let .getMsrstnAcctoRltmMesureDnsty(sid):
             return [
                 "serviceKey" : sid,
                 "returnType" : "json",
@@ -115,7 +115,7 @@ extension ArpltnStatsSvcAPI: BaseAPIRouter, URLRequestConvertible {
                 //"pageNo" : "1",
             ]
             
-        case let .getMsrstnAcctoRltmMesureDnsty(sid):
+        case let .getCtprvnRltmMesureDnsty(sid):
             return [
                 "serviceKey" : sid,
                 "returnType" : "json",
@@ -133,9 +133,9 @@ extension ArpltnStatsSvcAPI: BaseAPIRouter, URLRequestConvertible {
         switch self {
         case .getMinuDustFrcstDspth,
                 .getMinuDustWeekFrcstDspth,
-                .getCtprvnRltmMesureDnsty,
+                .getMsrstnAcctoRltmMesureDnsty,
                 .getUnityAirEnvrnIdexSnstiveAboveMsrstnList,
-                .getMsrstnAcctoRltmMesureDnsty:
+                .getCtprvnRltmMesureDnsty:
             return URLEncoding.default
         }
     }
@@ -156,4 +156,4 @@ extension ArpltnStatsSvcAPI: BaseAPIRouter, URLRequestConvertible {
     }
 }
 
-//출처: https://jkim68888.tistory.com/18 [Jihyun Kim:티스토리]
+//참고: https://jkim68888.tistory.com/18 [Jihyun Kim:티스토리]

@@ -14,6 +14,8 @@ import ReactorKit
 import RxSwift
 import RxGesture
 
+import Alamofire
+
 //
 class SplashViewController: UIViewController, ReactorKit.View {
     
@@ -23,37 +25,60 @@ class SplashViewController: UIViewController, ReactorKit.View {
 
     weak var superNavigationController: UINavigationController?
         
-    
+    let arpltnInforInqireSvcService = ArpltnInforInqireSvcService()
+    lazy var a = ArpltnInforInqireSvcRepository(arpltnInforInqireSvcService: arpltnInforInqireSvcService)
     let testLbl = UILabel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        Log.debug("viewDidLoad")
         initUI()
 
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        Log.debug("viewDidAppear")
 
+        
+//        let sid = "cq%2BgNZLAImeNH9%2BgwPtxxS95Oo2zm94HtYKX%2F3it8H%2F4zlpSvQRmxtKPtFII8RVkPzVz4KKcCdVPKHkYxMQcvw%3D%3D"
+        let sid = "cq+gNZLAImeNH9+gwPtxxS95Oo2zm94HtYKX/3it8H/4zlpSvQRmxtKPtFII8RVkPzVz4KKcCdVPKHkYxMQcvw=="
+        
+//        a.getMinuDustFrcstDspth(sid: sid)
+//            .subscribe(onNext: { result in
+//                print("@@@@")
+//                print(result)
+//            })
+//            .disposed(by: disposeBag)
+        a.getCtprvnRltmMesureDnsty(sid: sid)
+            .subscribe(onNext: { result in
+                print("@@@@")
+                print(result)
+                print(result.response?.body?.items?.count)
+            })
+            .disposed(by: disposeBag)
+        
+        
+//        a.response?.body?.items?[0].
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        self.superNavigationController?.setNavigationBarHidden(false, animated: false)
+        Log.debug("viewDidDisappear")
+//        self.superNavigationController?.setNavigationBarHidden(false, animated: false)
 
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        Log.debug("StoryEventViewController viewWillAppear")
-        initNavigationBar()
+        Log.debug("viewWillAppear")
+//        initNavigationBar()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        
+        Log.debug("viewWillDisappear")
     }
     
     init(reactor: Reactor) {
@@ -66,7 +91,7 @@ class SplashViewController: UIViewController, ReactorKit.View {
     }
     
     deinit {
-        Log.debug("StoryEventViewController deinit")
+        Log.debug("deinit")
         disposeBag = DisposeBag()
     }
     
@@ -76,9 +101,9 @@ class SplashViewController: UIViewController, ReactorKit.View {
         
         constraintConfigure()
         
-        var a = ASSBaseResponse<MsrstnAcctoRltmMesureDnstyItem>(response: nil)
         
-//        a.response?.body?.items?[0].
+       
+        
 
     }
     
@@ -111,7 +136,7 @@ class SplashViewController: UIViewController, ReactorKit.View {
         view.backgroundColor = .brown
 
         testLbl.text = "테스트"
-        testLbl.textColor = .black
+        testLbl.textColor = .white
         view.addSubview(testLbl)
        
     }

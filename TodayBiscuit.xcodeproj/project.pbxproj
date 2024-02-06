@@ -22,7 +22,7 @@
 		DB0139DE2B1B362900758ADE /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0139DD2B1B362900758ADE /* SplashViewController.swift */; };
 		DB0139E02B1B369800758ADE /* OSLog+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0139DF2B1B369800758ADE /* OSLog+Extension.swift */; };
 		DB0139E22B1B376900758ADE /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0139E12B1B376900758ADE /* Bundle+Extension.swift */; };
-		DB612B602B6CD75800E204F6 /* ASSBaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB612B5F2B6CD75800E204F6 /* ASSBaseResponse.swift */; };
+		DB612B602B6CD75800E204F6 /* AIISBaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB612B5F2B6CD75800E204F6 /* AIISBaseResponse.swift */; };
 		DB612B622B6CDF4200E204F6 /* MinuDustFrcstDspthItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB612B612B6CDF4200E204F6 /* MinuDustFrcstDspthItem.swift */; };
 		DB612B642B6CDF5F00E204F6 /* MinuDustWeekFrcstDspthItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB612B632B6CDF5F00E204F6 /* MinuDustWeekFrcstDspthItem.swift */; };
 		DB612B662B706F0400E204F6 /* MsrstnAcctoRltmMesureDnstyItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB612B652B706F0400E204F6 /* MsrstnAcctoRltmMesureDnstyItem.swift */; };
@@ -32,6 +32,23 @@
 		DB612B6F2B70779300E204F6 /* MIISBaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB612B6E2B70779300E204F6 /* MIISBaseResponse.swift */; };
 		DB612B712B70789600E204F6 /* NearbyMsrstnListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB612B702B70789600E204F6 /* NearbyMsrstnListItem.swift */; };
 		DB612B732B7078FE00E204F6 /* TMStdrCrdntItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB612B722B7078FE00E204F6 /* TMStdrCrdntItem.swift */; };
+		DB612B752B71D0A400E204F6 /* ArpltnInforInqireSvcRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB612B742B71D0A400E204F6 /* ArpltnInforInqireSvcRepositoryProtocol.swift */; };
+		DB612B772B71D0DE00E204F6 /* MsrstnInfoInqireSvcRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB612B762B71D0DE00E204F6 /* MsrstnInfoInqireSvcRepositoryProtocol.swift */; };
+		DB612B792B71D19300E204F6 /* MsrstnInfoInqireSvcRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB612B782B71D19300E204F6 /* MsrstnInfoInqireSvcRepository.swift */; };
+		DB612B7B2B71D19E00E204F6 /* ArpltnInforInqireSvcRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB612B7A2B71D19E00E204F6 /* ArpltnInforInqireSvcRepository.swift */; };
+		DB612B802B71E6CA00E204F6 /* ArpltnInforInqireSvcAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB612B7F2B71E6CA00E204F6 /* ArpltnInforInqireSvcAPI.swift */; };
+		DB612B822B71E6D700E204F6 /* MsrstnInfoInqireSvcAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB612B812B71E6D700E204F6 /* MsrstnInfoInqireSvcAPI.swift */; };
+		DB612B842B71E6F600E204F6 /* MsrstnInfoInqireSvcService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB612B832B71E6F600E204F6 /* MsrstnInfoInqireSvcService.swift */; };
+		DB612B862B71E70300E204F6 /* ArpltnInforInqireSvcService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB612B852B71E70300E204F6 /* ArpltnInforInqireSvcService.swift */; };
+		DB612B882B71E77F00E204F6 /* BaseAPIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB612B872B71E77F00E204F6 /* BaseAPIRouter.swift */; };
+		DB612B8A2B71F5AB00E204F6 /* ArpltnStatsSvcRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB612B892B71F5AB00E204F6 /* ArpltnStatsSvcRepositoryProtocol.swift */; };
+		DB612B8C2B71F5B600E204F6 /* ArpltnStatsSvcRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB612B8B2B71F5B600E204F6 /* ArpltnStatsSvcRepository.swift */; };
+		DB612B8E2B71F5C200E204F6 /* ArpltnStatsSvcAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB612B8D2B71F5C200E204F6 /* ArpltnStatsSvcAPI.swift */; };
+		DB612B902B71F5CC00E204F6 /* ArpltnStatsSvcService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB612B8F2B71F5CC00E204F6 /* ArpltnStatsSvcService.swift */; };
+		DB612B932B71F60B00E204F6 /* ASSBaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB612B922B71F60B00E204F6 /* ASSBaseResponse.swift */; };
+		DB612B952B71F69900E204F6 /* MsrstnAcctoRDyrgItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB612B942B71F69900E204F6 /* MsrstnAcctoRDyrgItem.swift */; };
+		DB612B972B71F6AC00E204F6 /* MsrstnAcctoRMmrgItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB612B962B71F6AC00E204F6 /* MsrstnAcctoRMmrgItem.swift */; };
+		DB612B992B71F6C500E204F6 /* CtprvnMesureLIstItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB612B982B71F6C500E204F6 /* CtprvnMesureLIstItem.swift */; };
 		DBB5D3692B6B55C4007940C7 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = DBB5D3682B6B55C4007940C7 /* .gitignore */; };
 /* End PBXBuildFile section */
 
@@ -78,7 +95,7 @@
 		DB0139DD2B1B362900758ADE /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		DB0139DF2B1B369800758ADE /* OSLog+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OSLog+Extension.swift"; sourceTree = "<group>"; };
 		DB0139E12B1B376900758ADE /* Bundle+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
-		DB612B5F2B6CD75800E204F6 /* ASSBaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASSBaseResponse.swift; sourceTree = "<group>"; };
+		DB612B5F2B6CD75800E204F6 /* AIISBaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIISBaseResponse.swift; sourceTree = "<group>"; };
 		DB612B612B6CDF4200E204F6 /* MinuDustFrcstDspthItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinuDustFrcstDspthItem.swift; sourceTree = "<group>"; };
 		DB612B632B6CDF5F00E204F6 /* MinuDustWeekFrcstDspthItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinuDustWeekFrcstDspthItem.swift; sourceTree = "<group>"; };
 		DB612B652B706F0400E204F6 /* MsrstnAcctoRltmMesureDnstyItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MsrstnAcctoRltmMesureDnstyItem.swift; sourceTree = "<group>"; };
@@ -88,6 +105,23 @@
 		DB612B6E2B70779300E204F6 /* MIISBaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIISBaseResponse.swift; sourceTree = "<group>"; };
 		DB612B702B70789600E204F6 /* NearbyMsrstnListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyMsrstnListItem.swift; sourceTree = "<group>"; };
 		DB612B722B7078FE00E204F6 /* TMStdrCrdntItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMStdrCrdntItem.swift; sourceTree = "<group>"; };
+		DB612B742B71D0A400E204F6 /* ArpltnInforInqireSvcRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArpltnInforInqireSvcRepositoryProtocol.swift; sourceTree = "<group>"; };
+		DB612B762B71D0DE00E204F6 /* MsrstnInfoInqireSvcRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MsrstnInfoInqireSvcRepositoryProtocol.swift; sourceTree = "<group>"; };
+		DB612B782B71D19300E204F6 /* MsrstnInfoInqireSvcRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MsrstnInfoInqireSvcRepository.swift; sourceTree = "<group>"; };
+		DB612B7A2B71D19E00E204F6 /* ArpltnInforInqireSvcRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArpltnInforInqireSvcRepository.swift; sourceTree = "<group>"; };
+		DB612B7F2B71E6CA00E204F6 /* ArpltnInforInqireSvcAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArpltnInforInqireSvcAPI.swift; sourceTree = "<group>"; };
+		DB612B812B71E6D700E204F6 /* MsrstnInfoInqireSvcAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MsrstnInfoInqireSvcAPI.swift; sourceTree = "<group>"; };
+		DB612B832B71E6F600E204F6 /* MsrstnInfoInqireSvcService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MsrstnInfoInqireSvcService.swift; sourceTree = "<group>"; };
+		DB612B852B71E70300E204F6 /* ArpltnInforInqireSvcService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArpltnInforInqireSvcService.swift; sourceTree = "<group>"; };
+		DB612B872B71E77F00E204F6 /* BaseAPIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAPIRouter.swift; sourceTree = "<group>"; };
+		DB612B892B71F5AB00E204F6 /* ArpltnStatsSvcRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArpltnStatsSvcRepositoryProtocol.swift; sourceTree = "<group>"; };
+		DB612B8B2B71F5B600E204F6 /* ArpltnStatsSvcRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArpltnStatsSvcRepository.swift; sourceTree = "<group>"; };
+		DB612B8D2B71F5C200E204F6 /* ArpltnStatsSvcAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArpltnStatsSvcAPI.swift; sourceTree = "<group>"; };
+		DB612B8F2B71F5CC00E204F6 /* ArpltnStatsSvcService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArpltnStatsSvcService.swift; sourceTree = "<group>"; };
+		DB612B922B71F60B00E204F6 /* ASSBaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASSBaseResponse.swift; sourceTree = "<group>"; };
+		DB612B942B71F69900E204F6 /* MsrstnAcctoRDyrgItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MsrstnAcctoRDyrgItem.swift; sourceTree = "<group>"; };
+		DB612B962B71F6AC00E204F6 /* MsrstnAcctoRMmrgItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MsrstnAcctoRMmrgItem.swift; sourceTree = "<group>"; };
+		DB612B982B71F6C500E204F6 /* CtprvnMesureLIstItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CtprvnMesureLIstItem.swift; sourceTree = "<group>"; };
 		DBB5D3682B6B55C4007940C7 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		DBB5D36A2B6B5729007940C7 /* Secrets.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Secrets.xcconfig; sourceTree = "<group>"; };
 		FFF986AAAFF9C86C80E65CB9 /* Pods-TodayBiscuitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodayBiscuitTests.debug.xcconfig"; path = "Target Support Files/Pods-TodayBiscuitTests/Pods-TodayBiscuitTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -233,16 +267,17 @@
 		DB0139C92B1B28A900758ADE /* Interface */ = {
 			isa = PBXGroup;
 			children = (
-				DB0139CA2B1B28AF00758ADE /* Repository */,
+				DB0139CA2B1B28AF00758ADE /* Repositories */,
 			);
 			path = Interface;
 			sourceTree = "<group>";
 		};
-		DB0139CA2B1B28AF00758ADE /* Repository */ = {
+		DB0139CA2B1B28AF00758ADE /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				DB612B7C2B71D32C00E204F6 /* Protocol */,
 			);
-			path = Repository;
+			path = Repositories;
 			sourceTree = "<group>";
 		};
 		DB0139CC2B1B28C100758ADE /* Domain */ = {
@@ -266,8 +301,9 @@
 		DB0139CE2B1B28EE00758ADE /* Entity */ = {
 			isa = PBXGroup;
 			children = (
-				DB612B5E2B6CD6CE00E204F6 /* ArpltnStatsSvc_API */,
+				DB612B5E2B6CD6CE00E204F6 /* ArpltnInforInqireSvc_API */,
 				DB612B6B2B70771000E204F6 /* MsrstnInfoInqireSvc_API */,
+				DB612B912B71F5F200E204F6 /* ArpltnStatsSvc_API */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -379,6 +415,8 @@
 		DB612B5A2B6CB21E00E204F6 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				DB612B7D2B71E5A300E204F6 /* API */,
+				DB612B7E2B71E5A800E204F6 /* Service */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -386,6 +424,9 @@
 		DB612B5B2B6CB23400E204F6 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				DB612B7A2B71D19E00E204F6 /* ArpltnInforInqireSvcRepository.swift */,
+				DB612B782B71D19300E204F6 /* MsrstnInfoInqireSvcRepository.swift */,
+				DB612B8B2B71F5B600E204F6 /* ArpltnStatsSvcRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -397,17 +438,17 @@
 			path = Application;
 			sourceTree = "<group>";
 		};
-		DB612B5E2B6CD6CE00E204F6 /* ArpltnStatsSvc_API */ = {
+		DB612B5E2B6CD6CE00E204F6 /* ArpltnInforInqireSvc_API */ = {
 			isa = PBXGroup;
 			children = (
-				DB612B5F2B6CD75800E204F6 /* ASSBaseResponse.swift */,
+				DB612B5F2B6CD75800E204F6 /* AIISBaseResponse.swift */,
 				DB612B612B6CDF4200E204F6 /* MinuDustFrcstDspthItem.swift */,
 				DB612B632B6CDF5F00E204F6 /* MinuDustWeekFrcstDspthItem.swift */,
 				DB612B652B706F0400E204F6 /* MsrstnAcctoRltmMesureDnstyItem.swift */,
 				DB612B672B7070D700E204F6 /* UnityAirEnvrnIdexSnstiveAboveMsrstnListItem.swift */,
 				DB612B692B70717100E204F6 /* CtprvnRltmMesureDnstyItem.swift */,
 			);
-			path = ArpltnStatsSvc_API;
+			path = ArpltnInforInqireSvc_API;
 			sourceTree = "<group>";
 		};
 		DB612B6B2B70771000E204F6 /* MsrstnInfoInqireSvc_API */ = {
@@ -419,6 +460,48 @@
 				DB612B722B7078FE00E204F6 /* TMStdrCrdntItem.swift */,
 			);
 			path = MsrstnInfoInqireSvc_API;
+			sourceTree = "<group>";
+		};
+		DB612B7C2B71D32C00E204F6 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				DB612B742B71D0A400E204F6 /* ArpltnInforInqireSvcRepositoryProtocol.swift */,
+				DB612B762B71D0DE00E204F6 /* MsrstnInfoInqireSvcRepositoryProtocol.swift */,
+				DB612B892B71F5AB00E204F6 /* ArpltnStatsSvcRepositoryProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		DB612B7D2B71E5A300E204F6 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				DB612B872B71E77F00E204F6 /* BaseAPIRouter.swift */,
+				DB612B7F2B71E6CA00E204F6 /* ArpltnInforInqireSvcAPI.swift */,
+				DB612B812B71E6D700E204F6 /* MsrstnInfoInqireSvcAPI.swift */,
+				DB612B8D2B71F5C200E204F6 /* ArpltnStatsSvcAPI.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		DB612B7E2B71E5A800E204F6 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				DB612B852B71E70300E204F6 /* ArpltnInforInqireSvcService.swift */,
+				DB612B832B71E6F600E204F6 /* MsrstnInfoInqireSvcService.swift */,
+				DB612B8F2B71F5CC00E204F6 /* ArpltnStatsSvcService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		DB612B912B71F5F200E204F6 /* ArpltnStatsSvc_API */ = {
+			isa = PBXGroup;
+			children = (
+				DB612B922B71F60B00E204F6 /* ASSBaseResponse.swift */,
+				DB612B942B71F69900E204F6 /* MsrstnAcctoRDyrgItem.swift */,
+				DB612B962B71F6AC00E204F6 /* MsrstnAcctoRMmrgItem.swift */,
+				DB612B982B71F6C500E204F6 /* CtprvnMesureLIstItem.swift */,
+			);
+			path = ArpltnStatsSvc_API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -661,22 +744,39 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB0139E02B1B369800758ADE /* OSLog+Extension.swift in Sources */,
-				DB612B602B6CD75800E204F6 /* ASSBaseResponse.swift in Sources */,
+				DB612B602B6CD75800E204F6 /* AIISBaseResponse.swift in Sources */,
+				DB612B882B71E77F00E204F6 /* BaseAPIRouter.swift in Sources */,
+				DB612B8A2B71F5AB00E204F6 /* ArpltnStatsSvcRepositoryProtocol.swift in Sources */,
+				DB612B932B71F60B00E204F6 /* ASSBaseResponse.swift in Sources */,
 				DB0139E22B1B376900758ADE /* Bundle+Extension.swift in Sources */,
+				DB612B7B2B71D19E00E204F6 /* ArpltnInforInqireSvcRepository.swift in Sources */,
 				DB612B6D2B70774D00E204F6 /* MsrstnListItem.swift in Sources */,
 				DB612B682B7070D700E204F6 /* UnityAirEnvrnIdexSnstiveAboveMsrstnListItem.swift in Sources */,
+				DB612B822B71E6D700E204F6 /* MsrstnInfoInqireSvcAPI.swift in Sources */,
+				DB612B8C2B71F5B600E204F6 /* ArpltnStatsSvcRepository.swift in Sources */,
 				DB612B712B70789600E204F6 /* NearbyMsrstnListItem.swift in Sources */,
+				DB612B992B71F6C500E204F6 /* CtprvnMesureLIstItem.swift in Sources */,
+				DB612B972B71F6AC00E204F6 /* MsrstnAcctoRMmrgItem.swift in Sources */,
 				DB0139DA2B1B35C700758ADE /* SplashViewReactor.swift in Sources */,
 				DB612B642B6CDF5F00E204F6 /* MinuDustWeekFrcstDspthItem.swift in Sources */,
+				DB612B772B71D0DE00E204F6 /* MsrstnInfoInqireSvcRepositoryProtocol.swift in Sources */,
 				DB612B6A2B70717100E204F6 /* CtprvnRltmMesureDnstyItem.swift in Sources */,
+				DB612B8E2B71F5C200E204F6 /* ArpltnStatsSvcAPI.swift in Sources */,
+				DB612B752B71D0A400E204F6 /* ArpltnInforInqireSvcRepositoryProtocol.swift in Sources */,
 				DB612B6F2B70779300E204F6 /* MIISBaseResponse.swift in Sources */,
 				DB612B622B6CDF4200E204F6 /* MinuDustFrcstDspthItem.swift in Sources */,
 				DB01399D2B1B22E900758ADE /* TodayBiscuit.xcdatamodeld in Sources */,
 				DB0139932B1B22E900758ADE /* AppDelegate.swift in Sources */,
+				DB612B802B71E6CA00E204F6 /* ArpltnInforInqireSvcAPI.swift in Sources */,
 				DB0139952B1B22E900758ADE /* SceneDelegate.swift in Sources */,
+				DB612B862B71E70300E204F6 /* ArpltnInforInqireSvcService.swift in Sources */,
 				DB612B732B7078FE00E204F6 /* TMStdrCrdntItem.swift in Sources */,
+				DB612B792B71D19300E204F6 /* MsrstnInfoInqireSvcRepository.swift in Sources */,
 				DB0139DE2B1B362900758ADE /* SplashViewController.swift in Sources */,
+				DB612B842B71E6F600E204F6 /* MsrstnInfoInqireSvcService.swift in Sources */,
+				DB612B952B71F69900E204F6 /* MsrstnAcctoRDyrgItem.swift in Sources */,
 				DB612B662B706F0400E204F6 /* MsrstnAcctoRltmMesureDnstyItem.swift in Sources */,
+				DB612B902B71F5CC00E204F6 /* ArpltnStatsSvcService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

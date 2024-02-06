@@ -1,5 +1,5 @@
 //
-//  ASSBaseResponse.swift
+//  AIISBaseResponse.swift
 //  TodayBiscuit
 //
 //  Created by seonghoonkim on 2/2/24.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ASSBaseResponse<T: Codable>: Codable {
+struct AIISBaseResponse<T: Codable>: Codable {
     let response: Response?
 
     enum CodingKeys: String, CodingKey {
