@@ -1,5 +1,5 @@
 //
-//  ASSBaseResponse.swift
+//  ArpltnStatsSvcService.swift
 //  TodayBiscuit
 //
 //  Created by seonghoonkim on 2/6/24.
