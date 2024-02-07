@@ -10,12 +10,19 @@ import Foundation
 import RxSwift
 import Alamofire
 
+import OSLog
+
 public struct MsrstnInfoInqireSvcService {
     /// 측정소별 실시간 측정정보 조회(주 메인)
     func getMsrstnList(sid: String) -> Observable<Result<MIISBaseResponse<MsrstnListItem>, Error>> {
          return Observable.create { observer -> Disposable in
              // Alamofire로 서버와 통신하는 부분이다.
+             
+             
+             
              AF.request(MsrstnInfoInqireSvcAPI.getMsrstnList(sid: sid))
+                 .validate(statusCode: 200..<300) // 200~300 사이 상태코드만 허용
+                 .validate(contentType:["application/json"]) // JSON 포맷만 허용
                  .responseDecodable(of: MIISBaseResponse<MsrstnListItem>.self) { response in
                      print("[status code] \(response.response?.statusCode as Any)")
                      
@@ -36,6 +43,8 @@ public struct MsrstnInfoInqireSvcService {
          return Observable.create { observer -> Disposable in
              // Alamofire로 서버와 통신하는 부분이다.
              AF.request(MsrstnInfoInqireSvcAPI.getNearbyMsrstnList(sid: sid))
+                 .validate(statusCode: 200..<300) // 200~300 사이 상태코드만 허용
+                 .validate(contentType:["application/json"]) // JSON 포맷만 허용
                  .responseDecodable(of: MIISBaseResponse<NearbyMsrstnListItem>.self) { response in
                      print("[status code] \(response.response?.statusCode as Any)")
                      
@@ -56,6 +65,8 @@ public struct MsrstnInfoInqireSvcService {
          return Observable.create { observer -> Disposable in
              // Alamofire로 서버와 통신하는 부분이다.
              AF.request(MsrstnInfoInqireSvcAPI.getTMStdrCrdnt(sid: sid))
+                 .validate(statusCode: 200..<300) // 200~300 사이 상태코드만 허용
+                 .validate(contentType:["application/json"]) // JSON 포맷만 허용
                  .responseDecodable(of: MIISBaseResponse<TMStdrCrdntItem>.self) { response in
                      print("[status code] \(response.response?.statusCode as Any)")
                      

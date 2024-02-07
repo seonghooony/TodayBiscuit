@@ -151,7 +151,7 @@ extension ArpltnInforInqireSvcAPI: BaseAPIRouter, URLRequestConvertible {
         if let encoding = encoding {
             return try encoding.encode(request, with: parameters)
         }
-        
+
         return request
     }
 }

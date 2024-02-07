@@ -49,6 +49,8 @@
 		DB612B952B71F69900E204F6 /* MsrstnAcctoRDyrgItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB612B942B71F69900E204F6 /* MsrstnAcctoRDyrgItem.swift */; };
 		DB612B972B71F6AC00E204F6 /* MsrstnAcctoRMmrgItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB612B962B71F6AC00E204F6 /* MsrstnAcctoRMmrgItem.swift */; };
 		DB612B992B71F6C500E204F6 /* CtprvnMesureLIstItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB612B982B71F6C500E204F6 /* CtprvnMesureLIstItem.swift */; };
+		DB612B9B2B730E2300E204F6 /* Data+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB612B9A2B730E2300E204F6 /* Data+Extension.swift */; };
+		DB612B9D2B733DC300E204F6 /* OSLog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB612B9C2B733DC300E204F6 /* OSLog.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		DBB5D3692B6B55C4007940C7 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = DBB5D3682B6B55C4007940C7 /* .gitignore */; };
 /* End PBXBuildFile section */
 
@@ -122,6 +124,8 @@
 		DB612B942B71F69900E204F6 /* MsrstnAcctoRDyrgItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MsrstnAcctoRDyrgItem.swift; sourceTree = "<group>"; };
 		DB612B962B71F6AC00E204F6 /* MsrstnAcctoRMmrgItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MsrstnAcctoRMmrgItem.swift; sourceTree = "<group>"; };
 		DB612B982B71F6C500E204F6 /* CtprvnMesureLIstItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CtprvnMesureLIstItem.swift; sourceTree = "<group>"; };
+		DB612B9A2B730E2300E204F6 /* Data+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Extension.swift"; sourceTree = "<group>"; };
+		DB612B9C2B733DC300E204F6 /* OSLog.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OSLog.framework; path = System/Library/Frameworks/OSLog.framework; sourceTree = SDKROOT; };
 		DBB5D3682B6B55C4007940C7 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		DBB5D36A2B6B5729007940C7 /* Secrets.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Secrets.xcconfig; sourceTree = "<group>"; };
 		FFF986AAAFF9C86C80E65CB9 /* Pods-TodayBiscuitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodayBiscuitTests.debug.xcconfig"; path = "Target Support Files/Pods-TodayBiscuitTests/Pods-TodayBiscuitTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -132,6 +136,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB612B9D2B733DC300E204F6 /* OSLog.framework in Frameworks */,
 				C14D197A836007FF10BCA96B /* Pods_TodayBiscuit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -158,6 +163,7 @@
 		474ECE96B44B337FAEAD784A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DB612B9C2B733DC300E204F6 /* OSLog.framework */,
 				31474E862CABBC47F0660B69 /* Pods_TodayBiscuit.framework */,
 				23B7A490F11DD516C4687492 /* Pods_TodayBiscuit_TodayBiscuitUITests.framework */,
 				51644D8AA74A72770ECA1C87 /* Pods_TodayBiscuitTests.framework */,
@@ -370,6 +376,7 @@
 			children = (
 				DB0139DF2B1B369800758ADE /* OSLog+Extension.swift */,
 				DB0139E12B1B376900758ADE /* Bundle+Extension.swift */,
+				DB612B9A2B730E2300E204F6 /* Data+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -765,6 +772,7 @@
 				DB612B752B71D0A400E204F6 /* ArpltnInforInqireSvcRepositoryProtocol.swift in Sources */,
 				DB612B6F2B70779300E204F6 /* MIISBaseResponse.swift in Sources */,
 				DB612B622B6CDF4200E204F6 /* MinuDustFrcstDspthItem.swift in Sources */,
+				DB612B9B2B730E2300E204F6 /* Data+Extension.swift in Sources */,
 				DB01399D2B1B22E900758ADE /* TodayBiscuit.xcdatamodeld in Sources */,
 				DB0139932B1B22E900758ADE /* AppDelegate.swift in Sources */,
 				DB612B802B71E6CA00E204F6 /* ArpltnInforInqireSvcAPI.swift in Sources */,

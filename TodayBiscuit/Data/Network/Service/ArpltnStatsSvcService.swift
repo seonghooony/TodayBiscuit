@@ -16,6 +16,8 @@ public struct ArpltnStatsSvcService {
          return Observable.create { observer -> Disposable in
              // Alamofire로 서버와 통신하는 부분이다.
              AF.request(ArpltnStatsSvcAPI.getMsrstnAcctoRDyrg(sid: sid))
+                 .validate(statusCode: 200..<300) // 200~300 사이 상태코드만 허용
+                 .validate(contentType:["application/json"]) // JSON 포맷만 허용
                  .responseDecodable(of: ASSBaseResponse<MsrstnAcctoRDyrgItem>.self) { response in
                      print("[status code] \(response.response?.statusCode as Any)")
                      
@@ -37,6 +39,8 @@ public struct ArpltnStatsSvcService {
          return Observable.create { observer -> Disposable in
              // Alamofire로 서버와 통신하는 부분이다.
              AF.request(ArpltnStatsSvcAPI.getMsrstnAcctoRMmrg(sid: sid))
+                 .validate(statusCode: 200..<300) // 200~300 사이 상태코드만 허용
+                 .validate(contentType:["application/json"]) // JSON 포맷만 허용
                  .responseDecodable(of: ASSBaseResponse<MsrstnAcctoRMmrgItem>.self) { response in
                      print("[status code] \(response.response?.statusCode as Any)")
                      
@@ -57,6 +61,8 @@ public struct ArpltnStatsSvcService {
          return Observable.create { observer -> Disposable in
              // Alamofire로 서버와 통신하는 부분이다.
              AF.request(ArpltnStatsSvcAPI.getCtprvnMesureLIst(sid: sid))
+                 .validate(statusCode: 200..<300) // 200~300 사이 상태코드만 허용
+                 .validate(contentType:["application/json"]) // JSON 포맷만 허용
                  .responseDecodable(of: ASSBaseResponse<CtprvnMesureLIstItem>.self) { response in
                      print("[status code] \(response.response?.statusCode as Any)")
                      

@@ -50,10 +50,10 @@ class SplashViewController: UIViewController, ReactorKit.View {
 //                print(result)
 //            })
 //            .disposed(by: disposeBag)
-        a.getCtprvnRltmMesureDnsty(sid: sid)
+        a.getMinuDustFrcstDspth(sid: sid)
             .subscribe(onNext: { result in
                 print("@@@@")
-                print(result)
+//                print(result)
                 print(result.response?.body?.items?.count)
             })
             .disposed(by: disposeBag)
