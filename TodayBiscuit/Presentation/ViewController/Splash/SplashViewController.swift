@@ -54,7 +54,7 @@ class SplashViewController: UIViewController, ReactorKit.View {
             .subscribe(onNext: { result in
                 print("@@@@")
 //                print(result)
-                print(result.response?.body?.items?.count)
+//                print(result.response?.body?.items?.count)
             })
             .disposed(by: disposeBag)
         

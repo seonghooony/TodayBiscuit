@@ -11,11 +11,12 @@ import RxSwift
 import Alamofire
 
 public struct ArpltnStatsSvcService {
+    
     /// 측정소별 실시간 일평균 정보 조회
     func getMsrstnAcctoRDyrg(sid: String) -> Observable<Result<ASSBaseResponse<MsrstnAcctoRDyrgItem>, Error>> {
          return Observable.create { observer -> Disposable in
              // Alamofire로 서버와 통신하는 부분이다.
-             AF.request(ArpltnStatsSvcAPI.getMsrstnAcctoRDyrg(sid: sid))
+             APIManager.shared.session.request(ArpltnStatsSvcAPI.getMsrstnAcctoRDyrg(sid: sid))
                  .validate(statusCode: 200..<300) // 200~300 사이 상태코드만 허용
                  .validate(contentType:["application/json"]) // JSON 포맷만 허용
                  .responseDecodable(of: ASSBaseResponse<MsrstnAcctoRDyrgItem>.self) { response in
@@ -38,7 +39,7 @@ public struct ArpltnStatsSvcService {
     func getMsrstnAcctoRMmrg(sid: String) -> Observable<Result<ASSBaseResponse<MsrstnAcctoRMmrgItem>, Error>> {
          return Observable.create { observer -> Disposable in
              // Alamofire로 서버와 통신하는 부분이다.
-             AF.request(ArpltnStatsSvcAPI.getMsrstnAcctoRMmrg(sid: sid))
+             APIManager.shared.session.request(ArpltnStatsSvcAPI.getMsrstnAcctoRMmrg(sid: sid))
                  .validate(statusCode: 200..<300) // 200~300 사이 상태코드만 허용
                  .validate(contentType:["application/json"]) // JSON 포맷만 허용
                  .responseDecodable(of: ASSBaseResponse<MsrstnAcctoRMmrgItem>.self) { response in
@@ -60,7 +61,7 @@ public struct ArpltnStatsSvcService {
     func getCtprvnMesureLIst(sid: String) -> Observable<Result<ASSBaseResponse<CtprvnMesureLIstItem>, Error>> {
          return Observable.create { observer -> Disposable in
              // Alamofire로 서버와 통신하는 부분이다.
-             AF.request(ArpltnStatsSvcAPI.getCtprvnMesureLIst(sid: sid))
+             APIManager.shared.session.request(ArpltnStatsSvcAPI.getCtprvnMesureLIst(sid: sid))
                  .validate(statusCode: 200..<300) // 200~300 사이 상태코드만 허용
                  .validate(contentType:["application/json"]) // JSON 포맷만 허용
                  .responseDecodable(of: ASSBaseResponse<CtprvnMesureLIstItem>.self) { response in

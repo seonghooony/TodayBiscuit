@@ -17,7 +17,8 @@ public struct ArpltnInforInqireSvcService {
        print("getMinuDustFrcstDspth22")
         return Observable.create { observer -> Disposable in
             // Alamofire로 서버와 통신하는 부분이다.
-            AF.request(ArpltnInforInqireSvcAPI.getMinuDustFrcstDspth(sid: sid))
+            
+            APIManager.shared.session.request(ArpltnInforInqireSvcAPI.getMinuDustFrcstDspth(sid: sid))
                 .validate(statusCode: 200..<300) // 200~300 사이 상태코드만 허용
                 .validate(contentType:["application/json"]) // JSON 포맷만 허용
                 .responseDecodable(of: AIISBaseResponse<MinuDustFrcstDspthItem>.self) { response in
@@ -50,7 +51,7 @@ public struct ArpltnInforInqireSvcService {
     func getMinuDustWeekFrcstDspth(sid: String) -> Observable<Result<AIISBaseResponse<MinuDustWeekFrcstDspthItem>, Error>> {
          return Observable.create { observer -> Disposable in
              // Alamofire로 서버와 통신하는 부분이다.
-             AF.request(ArpltnInforInqireSvcAPI.getMinuDustWeekFrcstDspth(sid: sid))
+             APIManager.shared.session.request(ArpltnInforInqireSvcAPI.getMinuDustWeekFrcstDspth(sid: sid))
                  .validate(statusCode: 200..<300) // 200~300 사이 상태코드만 허용
                  .validate(contentType:["application/json"]) // JSON 포맷만 허용
                  .responseDecodable(of: AIISBaseResponse<MinuDustWeekFrcstDspthItem>.self) { response in
@@ -73,7 +74,7 @@ public struct ArpltnInforInqireSvcService {
     func getCtprvnRltmMesureDnsty(sid: String) -> Observable<Result<AIISBaseResponse<MsrstnAcctoRltmMesureDnstyItem>, Error>> {
          return Observable.create { observer -> Disposable in
              // Alamofire로 서버와 통신하는 부분이다.
-             AF.request(ArpltnInforInqireSvcAPI.getCtprvnRltmMesureDnsty(sid: sid))
+             APIManager.shared.session.request(ArpltnInforInqireSvcAPI.getCtprvnRltmMesureDnsty(sid: sid))
                  .validate(statusCode: 200..<300) // 200~300 사이 상태코드만 허용
                  .validate(contentType:["application/json"]) // JSON 포맷만 허용
                  .responseDecodable(of: AIISBaseResponse<MsrstnAcctoRltmMesureDnstyItem>.self) { response in
@@ -96,7 +97,7 @@ public struct ArpltnInforInqireSvcService {
     func getUnityAirEnvrnIdexSnstiveAboveMsrstnList(sid: String) -> Observable<Result<AIISBaseResponse<UnityAirEnvrnIdexSnstiveAboveMsrstnListItem>, Error>> {
          return Observable.create { observer -> Disposable in
              // Alamofire로 서버와 통신하는 부분이다.
-             AF.request(ArpltnInforInqireSvcAPI.getUnityAirEnvrnIdexSnstiveAboveMsrstnList(sid: sid))
+             APIManager.shared.session.request(ArpltnInforInqireSvcAPI.getUnityAirEnvrnIdexSnstiveAboveMsrstnList(sid: sid))
                  .validate(statusCode: 200..<300) // 200~300 사이 상태코드만 허용
                  .validate(contentType:["application/json"]) // JSON 포맷만 허용
                  .responseDecodable(of: AIISBaseResponse<UnityAirEnvrnIdexSnstiveAboveMsrstnListItem>.self) { response in
@@ -119,7 +120,7 @@ public struct ArpltnInforInqireSvcService {
     func getMsrstnAcctoRltmMesureDnsty(sid: String) -> Observable<Result<AIISBaseResponse<CtprvnRltmMesureDnstyItem>, Error>> {
          return Observable.create { observer -> Disposable in
              // Alamofire로 서버와 통신하는 부분이다.
-             AF.request(ArpltnInforInqireSvcAPI.getMsrstnAcctoRltmMesureDnsty(sid: sid))
+             APIManager.shared.session.request(ArpltnInforInqireSvcAPI.getMsrstnAcctoRltmMesureDnsty(sid: sid))
                  .validate(statusCode: 200..<300) // 200~300 사이 상태코드만 허용
                  .validate(contentType:["application/json"]) // JSON 포맷만 허용
                  .responseDecodable(of: AIISBaseResponse<CtprvnRltmMesureDnstyItem>.self) { response in

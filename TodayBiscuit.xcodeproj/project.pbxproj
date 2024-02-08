@@ -51,6 +51,9 @@
 		DB612B992B71F6C500E204F6 /* CtprvnMesureLIstItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB612B982B71F6C500E204F6 /* CtprvnMesureLIstItem.swift */; };
 		DB612B9B2B730E2300E204F6 /* Data+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB612B9A2B730E2300E204F6 /* Data+Extension.swift */; };
 		DB612B9D2B733DC300E204F6 /* OSLog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB612B9C2B733DC300E204F6 /* OSLog.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		DB612BA02B7472DA00E204F6 /* APIEventLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB612B9F2B7472DA00E204F6 /* APIEventLogger.swift */; };
+		DB612BA42B74912D00E204F6 /* APIInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB612BA32B74912D00E204F6 /* APIInterceptor.swift */; };
+		DB612BA62B74929600E204F6 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB612BA52B74929600E204F6 /* APIManager.swift */; };
 		DBB5D3692B6B55C4007940C7 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = DBB5D3682B6B55C4007940C7 /* .gitignore */; };
 /* End PBXBuildFile section */
 
@@ -126,6 +129,9 @@
 		DB612B982B71F6C500E204F6 /* CtprvnMesureLIstItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CtprvnMesureLIstItem.swift; sourceTree = "<group>"; };
 		DB612B9A2B730E2300E204F6 /* Data+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Extension.swift"; sourceTree = "<group>"; };
 		DB612B9C2B733DC300E204F6 /* OSLog.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OSLog.framework; path = System/Library/Frameworks/OSLog.framework; sourceTree = SDKROOT; };
+		DB612B9F2B7472DA00E204F6 /* APIEventLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEventLogger.swift; sourceTree = "<group>"; };
+		DB612BA32B74912D00E204F6 /* APIInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIInterceptor.swift; sourceTree = "<group>"; };
+		DB612BA52B74929600E204F6 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		DBB5D3682B6B55C4007940C7 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		DBB5D36A2B6B5729007940C7 /* Secrets.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Secrets.xcconfig; sourceTree = "<group>"; };
 		FFF986AAAFF9C86C80E65CB9 /* Pods-TodayBiscuitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodayBiscuitTests.debug.xcconfig"; path = "Target Support Files/Pods-TodayBiscuitTests/Pods-TodayBiscuitTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -422,6 +428,7 @@
 		DB612B5A2B6CB21E00E204F6 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				DB612B9E2B7472BD00E204F6 /* Common */,
 				DB612B7D2B71E5A300E204F6 /* API */,
 				DB612B7E2B71E5A800E204F6 /* Service */,
 			);
@@ -482,7 +489,6 @@
 		DB612B7D2B71E5A300E204F6 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				DB612B872B71E77F00E204F6 /* BaseAPIRouter.swift */,
 				DB612B7F2B71E6CA00E204F6 /* ArpltnInforInqireSvcAPI.swift */,
 				DB612B812B71E6D700E204F6 /* MsrstnInfoInqireSvcAPI.swift */,
 				DB612B8D2B71F5C200E204F6 /* ArpltnStatsSvcAPI.swift */,
@@ -509,6 +515,17 @@
 				DB612B982B71F6C500E204F6 /* CtprvnMesureLIstItem.swift */,
 			);
 			path = ArpltnStatsSvc_API;
+			sourceTree = "<group>";
+		};
+		DB612B9E2B7472BD00E204F6 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				DB612BA52B74929600E204F6 /* APIManager.swift */,
+				DB612B9F2B7472DA00E204F6 /* APIEventLogger.swift */,
+				DB612BA32B74912D00E204F6 /* APIInterceptor.swift */,
+				DB612B872B71E77F00E204F6 /* BaseAPIRouter.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -751,6 +768,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB0139E02B1B369800758ADE /* OSLog+Extension.swift in Sources */,
+				DB612BA42B74912D00E204F6 /* APIInterceptor.swift in Sources */,
 				DB612B602B6CD75800E204F6 /* AIISBaseResponse.swift in Sources */,
 				DB612B882B71E77F00E204F6 /* BaseAPIRouter.swift in Sources */,
 				DB612B8A2B71F5AB00E204F6 /* ArpltnStatsSvcRepositoryProtocol.swift in Sources */,
@@ -777,12 +795,14 @@
 				DB0139932B1B22E900758ADE /* AppDelegate.swift in Sources */,
 				DB612B802B71E6CA00E204F6 /* ArpltnInforInqireSvcAPI.swift in Sources */,
 				DB0139952B1B22E900758ADE /* SceneDelegate.swift in Sources */,
+				DB612BA02B7472DA00E204F6 /* APIEventLogger.swift in Sources */,
 				DB612B862B71E70300E204F6 /* ArpltnInforInqireSvcService.swift in Sources */,
 				DB612B732B7078FE00E204F6 /* TMStdrCrdntItem.swift in Sources */,
 				DB612B792B71D19300E204F6 /* MsrstnInfoInqireSvcRepository.swift in Sources */,
 				DB0139DE2B1B362900758ADE /* SplashViewController.swift in Sources */,
 				DB612B842B71E6F600E204F6 /* MsrstnInfoInqireSvcService.swift in Sources */,
 				DB612B952B71F69900E204F6 /* MsrstnAcctoRDyrgItem.swift in Sources */,
+				DB612BA62B74929600E204F6 /* APIManager.swift in Sources */,
 				DB612B662B706F0400E204F6 /* MsrstnAcctoRltmMesureDnstyItem.swift in Sources */,
 				DB612B902B71F5CC00E204F6 /* ArpltnStatsSvcService.swift in Sources */,
 			);
