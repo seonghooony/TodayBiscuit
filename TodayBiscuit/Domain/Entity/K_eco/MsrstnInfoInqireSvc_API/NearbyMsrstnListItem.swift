@@ -17,3 +17,5 @@ struct NearbyMsrstnListItem: Codable {
     let tm: String?
     
 }
+
+// https://www.data.go.kr/tcs/dss/selectApiDataDetailView.do?publicDataPk=15073877

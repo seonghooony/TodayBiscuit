@@ -1,13 +1,14 @@
 //
-//  MIISBaseResponse.swift
+//  AIISBaseResponse.swift
 //  TodayBiscuit
 //
-//  Created by seonghoonkim on 2/5/24.
+//  Created by seonghoonkim on 2/2/24.
 //
 
 import Foundation
 
-struct MIISBaseResponse<T: Codable>: Codable {
+/// 한국환경공단_에어코리아_대기오염정보
+struct AIISBaseResponse<T: Codable>: Codable {
     let response: Response?
 
     enum CodingKeys: String, CodingKey {
@@ -49,3 +50,8 @@ struct MIISBaseResponse<T: Codable>: Codable {
         
     }
 }
+
+
+//공공데이터포털
+//https://www.data.go.kr/iim/api/selectAPIAcountView.do
+

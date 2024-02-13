@@ -79,3 +79,5 @@ public struct ArpltnStatsSvcService {
          }
      }
 }
+
+// 참고: https://jkim68888.tistory.com/18 [Jihyun Kim:티스토리]

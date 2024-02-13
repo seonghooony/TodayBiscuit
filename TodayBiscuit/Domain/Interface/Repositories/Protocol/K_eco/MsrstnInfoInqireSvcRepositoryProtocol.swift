@@ -17,3 +17,6 @@ protocol MsrstnInfoInqireSvcRepositoryProtocol {
     /// TM 기준좌표 조회
     func getTMStdrCrdnt(sid: String) -> Observable<MIISBaseResponse<TMStdrCrdntItem>>
 }
+
+// https://eunjin3786.tistory.com/207
+// defaultRepository의 프로토콜이라 보면됨

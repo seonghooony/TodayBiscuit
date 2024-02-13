@@ -21,3 +21,6 @@ protocol ArpltnInforInqireSvcRepositoryProtocol {
     func getMsrstnAcctoRltmMesureDnsty(sid: String) -> Observable<AIISBaseResponse<CtprvnRltmMesureDnstyItem>>
     
 }
+
+// https://eunjin3786.tistory.com/207
+// defaultRepository의 프로토콜이라 보면됨

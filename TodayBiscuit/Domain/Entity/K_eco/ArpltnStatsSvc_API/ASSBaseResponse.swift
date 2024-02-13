@@ -1,13 +1,15 @@
 //
-//  AIISBaseResponse.swift
+//  ASSBaseResponse.swift
 //  TodayBiscuit
 //
-//  Created by seonghoonkim on 2/2/24.
+//  Created by seonghoonkim on 2/6/24.
 //
+
 
 import Foundation
 
-struct AIISBaseResponse<T: Codable>: Codable {
+/// 한국환경공단_에어코리아_대기오염통계 현황
+struct ASSBaseResponse<T: Codable>: Codable {
     let response: Response?
 
     enum CodingKeys: String, CodingKey {
@@ -50,6 +52,4 @@ struct AIISBaseResponse<T: Codable>: Codable {
     }
 }
 
-
-//공공데이터포털
-//https://www.data.go.kr/tcs/dss/selectApiDataDetailView.do?publicDataPk=15073861
+//https://www.data.go.kr/iim/api/selectAPIAcountView.do

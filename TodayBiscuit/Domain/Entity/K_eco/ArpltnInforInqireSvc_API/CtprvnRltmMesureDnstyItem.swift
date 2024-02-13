@@ -62,3 +62,6 @@ struct CtprvnRltmMesureDnstyItem: Codable {
     /// 초미세먼지(PM2.5) 플래그
     let pm25Flag: String?
 }
+
+//공공데이터포털
+//https://www.data.go.kr/tcs/dss/selectApiDataDetailView.do?publicDataPk=15073861

@@ -20,3 +20,5 @@ struct TMStdrCrdntItem: Codable {
     /// TM_Y 좌표
     let tmY: String?
 }
+
+// https://www.data.go.kr/tcs/dss/selectApiDataDetailView.do?publicDataPk=15073877

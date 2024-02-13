@@ -24,3 +24,5 @@ struct MsrstnListItem: Codable {
     /// WGS84 기반 Y좌표
     let dmY: String?
 }
+
+// https://www.data.go.kr/tcs/dss/selectApiDataDetailView.do?publicDataPk=15073877

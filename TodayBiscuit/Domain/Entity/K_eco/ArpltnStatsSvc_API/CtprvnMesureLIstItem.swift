@@ -51,3 +51,5 @@ struct CtprvnMesureLIstItem: Codable {
     let sejong: String?
     
 }
+
+//https://www.data.go.kr/tcs/dss/selectApiDataDetailView.do?publicDataPk=15073855

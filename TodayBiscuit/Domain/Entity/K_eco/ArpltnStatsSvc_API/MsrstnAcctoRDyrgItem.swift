@@ -1,5 +1,5 @@
 //
-//  MsrstnAcctoRMmrgItem.swift
+//  MsrstnAcctoRDyrgItem.swift
 //  TodayBiscuit
 //
 //  Created by seonghoonkim on 2/6/24.
@@ -7,10 +7,10 @@
 
 import Foundation
 
-/// 조회 기간 내 측정소별 실시간 월평균 정보를 조회(최종확정 이전 실시간 데이터만 제공, 최근 약 3~6개월 데이터)
-struct MsrstnAcctoRMmrgItem: Codable {
-    /// 측정월
-    let msurMm: String?
+/// 조회 기간 내 측정소별 실시간 일평균 정보를 조회(최종확정 이전 실시간 데이터만 제공, 최근 약 3~6개월 데이터)
+struct MsrstnAcctoRDyrgItem: Codable {
+    /// 측정일
+    let msurDt: String?
     /// 측정소명
     let msrstnName: String?
     /// 아황산가스 평균농도
@@ -26,3 +26,5 @@ struct MsrstnAcctoRMmrgItem: Codable {
     /// 초미세먼지 평균농도
     let pm25Value: String?
 }
+
+//https://www.data.go.kr/tcs/dss/selectApiDataDetailView.do?publicDataPk=15073855
