@@ -17,6 +17,8 @@ target 'TodayBiscuit' do
   pod 'RxGesture'
   pod 'RxViewController'
 
+  pod 'Swinject'
+
 
 
   target 'TodayBiscuitTests' do

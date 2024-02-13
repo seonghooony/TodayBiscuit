@@ -54,6 +54,8 @@
 		DB612BA02B7472DA00E204F6 /* APIEventLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB612B9F2B7472DA00E204F6 /* APIEventLogger.swift */; };
 		DB612BA42B74912D00E204F6 /* APIInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB612BA32B74912D00E204F6 /* APIInterceptor.swift */; };
 		DB612BA62B74929600E204F6 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB612BA52B74929600E204F6 /* APIManager.swift */; };
+		DB612BA82B7B0E5E00E204F6 /* SplashUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB612BA72B7B0E5E00E204F6 /* SplashUseCase.swift */; };
+		DB612BB02B7B3ECB00E204F6 /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB612BAF2B7B3ECB00E204F6 /* DIContainer.swift */; };
 		DBB5D3692B6B55C4007940C7 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = DBB5D3682B6B55C4007940C7 /* .gitignore */; };
 /* End PBXBuildFile section */
 
@@ -132,6 +134,8 @@
 		DB612B9F2B7472DA00E204F6 /* APIEventLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEventLogger.swift; sourceTree = "<group>"; };
 		DB612BA32B74912D00E204F6 /* APIInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIInterceptor.swift; sourceTree = "<group>"; };
 		DB612BA52B74929600E204F6 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		DB612BA72B7B0E5E00E204F6 /* SplashUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashUseCase.swift; sourceTree = "<group>"; };
+		DB612BAF2B7B3ECB00E204F6 /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
 		DBB5D3682B6B55C4007940C7 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		DBB5D36A2B6B5729007940C7 /* Secrets.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Secrets.xcconfig; sourceTree = "<group>"; };
 		FFF986AAAFF9C86C80E65CB9 /* Pods-TodayBiscuitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodayBiscuitTests.debug.xcconfig"; path = "Target Support Files/Pods-TodayBiscuitTests/Pods-TodayBiscuitTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -223,12 +227,8 @@
 				DB0139CC2B1B28C100758ADE /* Domain */,
 				DB0139C82B1B28A300758ADE /* Data */,
 				DB0139C62B1B286E00758ADE /* Resource */,
-				DB0139922B1B22E900758ADE /* AppDelegate.swift */,
-				DB0139942B1B22E900758ADE /* SceneDelegate.swift */,
-				DB01399E2B1B22EA00758ADE /* Assets.xcassets */,
 				DB0139A02B1B22EA00758ADE /* LaunchScreen.storyboard */,
 				DB0139A32B1B22EA00758ADE /* TodayBiscuit.entitlements */,
-				DB0139A42B1B22EA00758ADE /* Info.plist */,
 				DB01399B2B1B22E900758ADE /* TodayBiscuit.xcdatamodeld */,
 			);
 			path = TodayBiscuit;
@@ -254,6 +254,7 @@
 		DB0139C62B1B286E00758ADE /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				DB01399E2B1B22EA00758ADE /* Assets.xcassets */,
 				DB0139C72B1B288000758ADE /* Strings */,
 			);
 			path = Resource;
@@ -305,7 +306,7 @@
 		DB0139CD2B1B28CD00758ADE /* UseCase */ = {
 			isa = PBXGroup;
 			children = (
-				DB0139CF2B1B28FE00758ADE /* Main */,
+				DB0139CF2B1B28FE00758ADE /* Splash */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -313,18 +314,17 @@
 		DB0139CE2B1B28EE00758ADE /* Entity */ = {
 			isa = PBXGroup;
 			children = (
-				DB612B5E2B6CD6CE00E204F6 /* ArpltnInforInqireSvc_API */,
-				DB612B6B2B70771000E204F6 /* MsrstnInfoInqireSvc_API */,
-				DB612B912B71F5F200E204F6 /* ArpltnStatsSvc_API */,
+				DB612BA92B7B25C300E204F6 /* K_eco */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
 		};
-		DB0139CF2B1B28FE00758ADE /* Main */ = {
+		DB0139CF2B1B28FE00758ADE /* Splash */ = {
 			isa = PBXGroup;
 			children = (
+				DB612BA72B7B0E5E00E204F6 /* SplashUseCase.swift */,
 			);
-			path = Main;
+			path = Splash;
 			sourceTree = "<group>";
 		};
 		DB0139D02B1B290700758ADE /* Presentation */ = {
@@ -390,6 +390,7 @@
 		DB0139D72B1B299B00758ADE /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				DB612BAF2B7B3ECB00E204F6 /* DIContainer.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -438,9 +439,7 @@
 		DB612B5B2B6CB23400E204F6 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
-				DB612B7A2B71D19E00E204F6 /* ArpltnInforInqireSvcRepository.swift */,
-				DB612B782B71D19300E204F6 /* MsrstnInfoInqireSvcRepository.swift */,
-				DB612B8B2B71F5B600E204F6 /* ArpltnStatsSvcRepository.swift */,
+				DB612BAB2B7B26AE00E204F6 /* K_eco */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -448,6 +447,9 @@
 		DB612B5C2B6CB48500E204F6 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				DB0139922B1B22E900758ADE /* AppDelegate.swift */,
+				DB0139942B1B22E900758ADE /* SceneDelegate.swift */,
+				DB0139A42B1B22EA00758ADE /* Info.plist */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -479,9 +481,7 @@
 		DB612B7C2B71D32C00E204F6 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
-				DB612B742B71D0A400E204F6 /* ArpltnInforInqireSvcRepositoryProtocol.swift */,
-				DB612B762B71D0DE00E204F6 /* MsrstnInfoInqireSvcRepositoryProtocol.swift */,
-				DB612B892B71F5AB00E204F6 /* ArpltnStatsSvcRepositoryProtocol.swift */,
+				DB612BAA2B7B26A000E204F6 /* K_eco */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -489,9 +489,7 @@
 		DB612B7D2B71E5A300E204F6 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				DB612B7F2B71E6CA00E204F6 /* ArpltnInforInqireSvcAPI.swift */,
-				DB612B812B71E6D700E204F6 /* MsrstnInfoInqireSvcAPI.swift */,
-				DB612B8D2B71F5C200E204F6 /* ArpltnStatsSvcAPI.swift */,
+				DB612BAD2B7B26E300E204F6 /* K_eco */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -499,9 +497,7 @@
 		DB612B7E2B71E5A800E204F6 /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				DB612B852B71E70300E204F6 /* ArpltnInforInqireSvcService.swift */,
-				DB612B832B71E6F600E204F6 /* MsrstnInfoInqireSvcService.swift */,
-				DB612B8F2B71F5CC00E204F6 /* ArpltnStatsSvcService.swift */,
+				DB612BAE2B7B26ED00E204F6 /* K_eco */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -526,6 +522,56 @@
 				DB612B872B71E77F00E204F6 /* BaseAPIRouter.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		DB612BA92B7B25C300E204F6 /* K_eco */ = {
+			isa = PBXGroup;
+			children = (
+				DB612B5E2B6CD6CE00E204F6 /* ArpltnInforInqireSvc_API */,
+				DB612B6B2B70771000E204F6 /* MsrstnInfoInqireSvc_API */,
+				DB612B912B71F5F200E204F6 /* ArpltnStatsSvc_API */,
+			);
+			path = K_eco;
+			sourceTree = "<group>";
+		};
+		DB612BAA2B7B26A000E204F6 /* K_eco */ = {
+			isa = PBXGroup;
+			children = (
+				DB612B742B71D0A400E204F6 /* ArpltnInforInqireSvcRepositoryProtocol.swift */,
+				DB612B762B71D0DE00E204F6 /* MsrstnInfoInqireSvcRepositoryProtocol.swift */,
+				DB612B892B71F5AB00E204F6 /* ArpltnStatsSvcRepositoryProtocol.swift */,
+			);
+			path = K_eco;
+			sourceTree = "<group>";
+		};
+		DB612BAB2B7B26AE00E204F6 /* K_eco */ = {
+			isa = PBXGroup;
+			children = (
+				DB612B7A2B71D19E00E204F6 /* ArpltnInforInqireSvcRepository.swift */,
+				DB612B782B71D19300E204F6 /* MsrstnInfoInqireSvcRepository.swift */,
+				DB612B8B2B71F5B600E204F6 /* ArpltnStatsSvcRepository.swift */,
+			);
+			path = K_eco;
+			sourceTree = "<group>";
+		};
+		DB612BAD2B7B26E300E204F6 /* K_eco */ = {
+			isa = PBXGroup;
+			children = (
+				DB612B7F2B71E6CA00E204F6 /* ArpltnInforInqireSvcAPI.swift */,
+				DB612B812B71E6D700E204F6 /* MsrstnInfoInqireSvcAPI.swift */,
+				DB612B8D2B71F5C200E204F6 /* ArpltnStatsSvcAPI.swift */,
+			);
+			path = K_eco;
+			sourceTree = "<group>";
+		};
+		DB612BAE2B7B26ED00E204F6 /* K_eco */ = {
+			isa = PBXGroup;
+			children = (
+				DB612B852B71E70300E204F6 /* ArpltnInforInqireSvcService.swift */,
+				DB612B832B71E6F600E204F6 /* MsrstnInfoInqireSvcService.swift */,
+				DB612B8F2B71F5CC00E204F6 /* ArpltnStatsSvcService.swift */,
+			);
+			path = K_eco;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -779,6 +825,7 @@
 				DB612B682B7070D700E204F6 /* UnityAirEnvrnIdexSnstiveAboveMsrstnListItem.swift in Sources */,
 				DB612B822B71E6D700E204F6 /* MsrstnInfoInqireSvcAPI.swift in Sources */,
 				DB612B8C2B71F5B600E204F6 /* ArpltnStatsSvcRepository.swift in Sources */,
+				DB612BB02B7B3ECB00E204F6 /* DIContainer.swift in Sources */,
 				DB612B712B70789600E204F6 /* NearbyMsrstnListItem.swift in Sources */,
 				DB612B992B71F6C500E204F6 /* CtprvnMesureLIstItem.swift in Sources */,
 				DB612B972B71F6AC00E204F6 /* MsrstnAcctoRMmrgItem.swift in Sources */,
@@ -805,6 +852,7 @@
 				DB612BA62B74929600E204F6 /* APIManager.swift in Sources */,
 				DB612B662B706F0400E204F6 /* MsrstnAcctoRltmMesureDnstyItem.swift in Sources */,
 				DB612B902B71F5CC00E204F6 /* ArpltnStatsSvcService.swift in Sources */,
+				DB612BA82B7B0E5E00E204F6 /* SplashUseCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -982,7 +1030,7 @@
 				CURRENT_PROJECT_VERSION = 240129001;
 				DEVELOPMENT_TEAM = H95MAPX5SG;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = TodayBiscuit/Info.plist;
+				INFOPLIST_FILE = TodayBiscuit/Application/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.weather";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -1014,7 +1062,7 @@
 				CURRENT_PROJECT_VERSION = 240129001;
 				DEVELOPMENT_TEAM = H95MAPX5SG;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = TodayBiscuit/Info.plist;
+				INFOPLIST_FILE = TodayBiscuit/Application/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.weather";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
