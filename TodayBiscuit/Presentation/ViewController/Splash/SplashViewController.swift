@@ -16,7 +16,7 @@ import RxGesture
 
 import Alamofire
 
-//
+
 class SplashViewController: UIViewController, ReactorKit.View {
     
     var disposeBag: DisposeBag = DisposeBag()

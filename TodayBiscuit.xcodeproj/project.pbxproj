@@ -56,6 +56,10 @@
 		DB612BA62B74929600E204F6 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB612BA52B74929600E204F6 /* APIManager.swift */; };
 		DB612BA82B7B0E5E00E204F6 /* SplashUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB612BA72B7B0E5E00E204F6 /* SplashUseCase.swift */; };
 		DB612BB02B7B3ECB00E204F6 /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB612BAF2B7B3ECB00E204F6 /* DIContainer.swift */; };
+		DB612BB62B7E082D00E204F6 /* DumpFile1.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB612BB52B7E082D00E204F6 /* DumpFile1.swift */; };
+		DB612BB82B7E083800E204F6 /* DumpFile2.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB612BB72B7E083800E204F6 /* DumpFile2.swift */; };
+		DB612BBD2B7E092F00E204F6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DB612BBF2B7E092F00E204F6 /* Localizable.strings */; };
+		DB612BC22B7E09E900E204F6 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB612BC12B7E09E900E204F6 /* String+Extension.swift */; };
 		DBB5D3692B6B55C4007940C7 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = DBB5D3682B6B55C4007940C7 /* .gitignore */; };
 /* End PBXBuildFile section */
 
@@ -138,6 +142,12 @@
 		DB612BAF2B7B3ECB00E204F6 /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
 		DB612BB12B7DC30100E204F6 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		DB612BB42B7DC32B00E204F6 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		DB612BB52B7E082D00E204F6 /* DumpFile1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DumpFile1.swift; sourceTree = "<group>"; };
+		DB612BB72B7E083800E204F6 /* DumpFile2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DumpFile2.swift; sourceTree = "<group>"; };
+		DB612BBC2B7E092100E204F6 /* ko-KR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "ko-KR"; path = "ko-KR.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		DB612BBE2B7E092F00E204F6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		DB612BC02B7E093000E204F6 /* ko-KR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "ko-KR"; path = "ko-KR.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		DB612BC12B7E09E900E204F6 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		DBB5D3682B6B55C4007940C7 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		DBB5D36A2B6B5729007940C7 /* Secrets.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Secrets.xcconfig; sourceTree = "<group>"; };
 		FFF986AAAFF9C86C80E65CB9 /* Pods-TodayBiscuitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodayBiscuitTests.debug.xcconfig"; path = "Target Support Files/Pods-TodayBiscuitTests/Pods-TodayBiscuitTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -267,6 +277,7 @@
 		DB0139C72B1B288000758ADE /* Strings */ = {
 			isa = PBXGroup;
 			children = (
+				DB612BBF2B7E092F00E204F6 /* Localizable.strings */,
 			);
 			path = Strings;
 			sourceTree = "<group>";
@@ -345,6 +356,7 @@
 		DB0139D12B1B291800758ADE /* Flow */ = {
 			isa = PBXGroup;
 			children = (
+				DB612BB72B7E083800E204F6 /* DumpFile2.swift */,
 			);
 			path = Flow;
 			sourceTree = "<group>";
@@ -387,6 +399,7 @@
 				DB0139DF2B1B369800758ADE /* OSLog+Extension.swift */,
 				DB0139E12B1B376900758ADE /* Bundle+Extension.swift */,
 				DB612B9A2B730E2300E204F6 /* Data+Extension.swift */,
+				DB612BC12B7E09E900E204F6 /* String+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -426,6 +439,7 @@
 		DB612B592B6CB20300E204F6 /* CoreDataStorage */ = {
 			isa = PBXGroup;
 			children = (
+				DB612BB52B7E082D00E204F6 /* DumpFile1.swift */,
 			);
 			path = CoreDataStorage;
 			sourceTree = "<group>";
@@ -669,6 +683,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"ko-KR",
 			);
 			mainGroup = DB0139862B1B22E900758ADE;
 			productRefGroup = DB0139902B1B22E900758ADE /* Products */;
@@ -688,6 +703,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB0139A22B1B22EA00758ADE /* LaunchScreen.storyboard in Resources */,
+				DB612BBD2B7E092F00E204F6 /* Localizable.strings in Resources */,
 				DBB5D3692B6B55C4007940C7 /* .gitignore in Resources */,
 				DB01399F2B1B22EA00758ADE /* Assets.xcassets in Resources */,
 			);
@@ -819,6 +835,7 @@
 			files = (
 				DB0139E02B1B369800758ADE /* OSLog+Extension.swift in Sources */,
 				DB612BA42B74912D00E204F6 /* APIInterceptor.swift in Sources */,
+				DB612BB82B7E083800E204F6 /* DumpFile2.swift in Sources */,
 				DB612B602B6CD75800E204F6 /* AIISBaseResponse.swift in Sources */,
 				DB612B882B71E77F00E204F6 /* BaseAPIRouter.swift in Sources */,
 				DB612B8A2B71F5AB00E204F6 /* ArpltnStatsSvcRepositoryProtocol.swift in Sources */,
@@ -826,6 +843,7 @@
 				DB0139E22B1B376900758ADE /* Bundle+Extension.swift in Sources */,
 				DB612B7B2B71D19E00E204F6 /* ArpltnInforInqireSvcRepository.swift in Sources */,
 				DB612B6D2B70774D00E204F6 /* MsrstnListItem.swift in Sources */,
+				DB612BB62B7E082D00E204F6 /* DumpFile1.swift in Sources */,
 				DB612B682B7070D700E204F6 /* UnityAirEnvrnIdexSnstiveAboveMsrstnListItem.swift in Sources */,
 				DB612B822B71E6D700E204F6 /* MsrstnInfoInqireSvcAPI.swift in Sources */,
 				DB612B8C2B71F5B600E204F6 /* ArpltnStatsSvcRepository.swift in Sources */,
@@ -857,6 +875,7 @@
 				DB612B662B706F0400E204F6 /* MsrstnAcctoRltmMesureDnstyItem.swift in Sources */,
 				DB612B902B71F5CC00E204F6 /* ArpltnStatsSvcService.swift in Sources */,
 				DB612BA82B7B0E5E00E204F6 /* SplashUseCase.swift in Sources */,
+				DB612BC22B7E09E900E204F6 /* String+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -897,8 +916,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				DB0139A12B1B22EA00758ADE /* Base */,
+				DB612BBC2B7E092100E204F6 /* ko-KR */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		DB612BBF2B7E092F00E204F6 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DB612BBE2B7E092F00E204F6 /* en */,
+				DB612BC02B7E093000E204F6 /* ko-KR */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -909,6 +938,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -972,6 +1002,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
