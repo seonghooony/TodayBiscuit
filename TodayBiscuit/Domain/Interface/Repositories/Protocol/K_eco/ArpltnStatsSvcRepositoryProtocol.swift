@@ -11,11 +11,11 @@ import RxSwift
     
 protocol ArpltnStatsSvcRepositoryProtocol {
     /// 측정소별 실시간 일평균 정보 조회
-    func getMsrstnAcctoRDyrg(sid: String) -> Observable<ASSBaseResponse<MsrstnAcctoRDyrgItem>>
+    func getMsrstnAcctoRDyrg() -> Observable<ASSBaseResponse<MsrstnAcctoRDyrgItem>>
     /// 측정소별 실시간 월평균 정보 조회
-    func getMsrstnAcctoRMmrg(sid: String) -> Observable<ASSBaseResponse<MsrstnAcctoRMmrgItem>>
+    func getMsrstnAcctoRMmrg() -> Observable<ASSBaseResponse<MsrstnAcctoRMmrgItem>>
     /// 시도별 실시간 평균정보 조회
-    func getCtprvnMesureLIst(sid: String) -> Observable<ASSBaseResponse<CtprvnMesureLIstItem>>
+    func getCtprvnMesureLIst() -> Observable<ASSBaseResponse<CtprvnMesureLIstItem>>
     
 }
 

@@ -24,13 +24,13 @@ final class ArpltnStatsSvcRepository {
 extension ArpltnStatsSvcRepository: ArpltnStatsSvcRepositoryProtocol {
     
     /// 측정소별 실시간 일평균 정보 조회
-    func getMsrstnAcctoRDyrg(sid: String) -> Observable<ASSBaseResponse<MsrstnAcctoRDyrgItem>> {
+    func getMsrstnAcctoRDyrg() -> Observable<ASSBaseResponse<MsrstnAcctoRDyrgItem>> {
         let sid = UserDefaults.standard.string(forKey: "sid") ?? ""
         let observable = Observable<ASSBaseResponse<MsrstnAcctoRDyrgItem>>.create { [weak self] observer -> Disposable in
             
             guard let self = self else { return Disposables.create() }
             
-            self.arpltnStatsSvcService.getMsrstnAcctoRDyrg(sid: sid).subscribe (onNext: { result in
+            self.arpltnStatsSvcService.getMsrstnAcctoRDyrg().subscribe (onNext: { result in
                 switch result {
                 case let .success(result):
                     observer.onNext(result)
@@ -47,13 +47,13 @@ extension ArpltnStatsSvcRepository: ArpltnStatsSvcRepositoryProtocol {
     }
     
     /// 측정소별 실시간 월평균 정보 조회
-    func getMsrstnAcctoRMmrg(sid: String) -> Observable<ASSBaseResponse<MsrstnAcctoRMmrgItem>> {
+    func getMsrstnAcctoRMmrg() -> Observable<ASSBaseResponse<MsrstnAcctoRMmrgItem>> {
 //        let sid = UserDefaults.standard.string(forKey: "sid") ?? ""
         let observable = Observable<ASSBaseResponse<MsrstnAcctoRMmrgItem>>.create { [weak self] observer -> Disposable in
             
             guard let self = self else { return Disposables.create() }
             
-            self.arpltnStatsSvcService.getMsrstnAcctoRMmrg(sid: sid).subscribe (onNext: { result in
+            self.arpltnStatsSvcService.getMsrstnAcctoRMmrg().subscribe (onNext: { result in
                 switch result {
                 case let .success(result):
                     observer.onNext(result)
@@ -71,13 +71,13 @@ extension ArpltnStatsSvcRepository: ArpltnStatsSvcRepositoryProtocol {
     
     
     /// 시도별 실시간 평균정보 조회
-    func getCtprvnMesureLIst(sid: String) -> Observable<ASSBaseResponse<CtprvnMesureLIstItem>> {
+    func getCtprvnMesureLIst() -> Observable<ASSBaseResponse<CtprvnMesureLIstItem>> {
         let sid = UserDefaults.standard.string(forKey: "sid") ?? ""
         let observable = Observable<ASSBaseResponse<CtprvnMesureLIstItem>>.create { [weak self] observer -> Disposable in
             
             guard let self = self else { return Disposables.create() }
             
-            self.arpltnStatsSvcService.getCtprvnMesureLIst(sid: sid).subscribe (onNext: { result in
+            self.arpltnStatsSvcService.getCtprvnMesureLIst().subscribe (onNext: { result in
                 switch result {
                 case let .success(result):
                     observer.onNext(result)

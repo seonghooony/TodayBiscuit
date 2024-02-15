@@ -10,15 +10,15 @@ import RxSwift
 
 protocol ArpltnInforInqireSvcRepositoryProtocol {
     /// 대기질예보통보조회
-    func getMinuDustFrcstDspth(sid: String) -> Observable<AIISBaseResponse<MinuDustFrcstDspthItem>>
+    func getMinuDustFrcstDspth() -> Observable<AIISBaseResponse<MinuDustFrcstDspthItem>>
     /// 초미세먼지주간예보조회(안쓸예정)
-    func getMinuDustWeekFrcstDspth(sid: String) -> Observable<AIISBaseResponse<MinuDustWeekFrcstDspthItem>>
+    func getMinuDustWeekFrcstDspth() -> Observable<AIISBaseResponse<MinuDustWeekFrcstDspthItem>>
     /// 측정소별 실시간 측정정보 조회(주 메인)
-    func getCtprvnRltmMesureDnsty(sid: String) -> Observable<AIISBaseResponse<MsrstnAcctoRltmMesureDnstyItem>>
+    func getCtprvnRltmMesureDnsty() -> Observable<AIISBaseResponse<MsrstnAcctoRltmMesureDnstyItem>>
     /// 통합대기환경지수 나쁨 이상 측정소 목록조회(안쓸예정)
-    func getUnityAirEnvrnIdexSnstiveAboveMsrstnList(sid: String) -> Observable<AIISBaseResponse<UnityAirEnvrnIdexSnstiveAboveMsrstnListItem>>
+    func getUnityAirEnvrnIdexSnstiveAboveMsrstnList() -> Observable<AIISBaseResponse<UnityAirEnvrnIdexSnstiveAboveMsrstnListItem>>
     /// 시도별 실시간 측정정보 조회 (지도메인)
-    func getMsrstnAcctoRltmMesureDnsty(sid: String) -> Observable<AIISBaseResponse<CtprvnRltmMesureDnstyItem>>
+    func getMsrstnAcctoRltmMesureDnsty() -> Observable<AIISBaseResponse<CtprvnRltmMesureDnstyItem>>
     
 }
 

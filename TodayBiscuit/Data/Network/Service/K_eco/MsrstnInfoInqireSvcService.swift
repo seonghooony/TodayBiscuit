@@ -14,7 +14,13 @@ import OSLog
 
 public struct MsrstnInfoInqireSvcService {
     /// 측정소별 실시간 측정정보 조회(주 메인)
-    func getMsrstnList(sid: String) -> Observable<Result<MIISBaseResponse<MsrstnListItem>, Error>> {
+    func getMsrstnList() -> Observable<Result<MIISBaseResponse<MsrstnListItem>, Error>> {
+        
+        guard let sid = Bundle.main.KecoSvcKey_Decoding else {
+            print("K_eco API 키를 로드하지 못했습니다.")
+            return .empty()
+        }
+        
          return Observable.create { observer -> Disposable in
              // Alamofire로 서버와 통신하는 부분이다.
              APIManager.shared.session.request(MsrstnInfoInqireSvcAPI.getMsrstnList(sid: sid))
@@ -36,7 +42,13 @@ public struct MsrstnInfoInqireSvcService {
      }
     
     /// 근접측정소 목록 조회
-    func getNearbyMsrstnList(sid: String) -> Observable<Result<MIISBaseResponse<NearbyMsrstnListItem>, Error>> {
+    func getNearbyMsrstnList() -> Observable<Result<MIISBaseResponse<NearbyMsrstnListItem>, Error>> {
+        
+        guard let sid = Bundle.main.KecoSvcKey_Decoding else {
+            print("K_eco API 키를 로드하지 못했습니다.")
+            return .empty()
+        }
+        
          return Observable.create { observer -> Disposable in
              // Alamofire로 서버와 통신하는 부분이다.
              APIManager.shared.session.request(MsrstnInfoInqireSvcAPI.getNearbyMsrstnList(sid: sid))
@@ -58,7 +70,13 @@ public struct MsrstnInfoInqireSvcService {
      }
     
     /// TM 기준좌표 조회
-    func getTMStdrCrdnt(sid: String) -> Observable<Result<MIISBaseResponse<TMStdrCrdntItem>, Error>> {
+    func getTMStdrCrdnt() -> Observable<Result<MIISBaseResponse<TMStdrCrdntItem>, Error>> {
+        
+        guard let sid = Bundle.main.KecoSvcKey_Decoding else {
+            print("K_eco API 키를 로드하지 못했습니다.")
+            return .empty()
+        }
+        
          return Observable.create { observer -> Disposable in
              // Alamofire로 서버와 통신하는 부분이다.
              APIManager.shared.session.request(MsrstnInfoInqireSvcAPI.getTMStdrCrdnt(sid: sid))

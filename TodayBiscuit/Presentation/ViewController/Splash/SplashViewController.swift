@@ -22,17 +22,19 @@ class SplashViewController: UIViewController, ReactorKit.View {
     var disposeBag: DisposeBag = DisposeBag()
 
     typealias Reactor = SplashViewReactor
-
-    weak var superNavigationController: UINavigationController?
         
     let arpltnInforInqireSvcService = ArpltnInforInqireSvcService()
     lazy var a = ArpltnInforInqireSvcRepository(arpltnInforInqireSvcService: arpltnInforInqireSvcService)
     let testLbl = UILabel()
     
+    var viewDidLoadSubject = PublishSubject<Bool>()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         Log.debug("viewDidLoad")
         initUI()
+        
+        viewDidLoadSubject.onNext(true)
 
     }
     
@@ -40,26 +42,6 @@ class SplashViewController: UIViewController, ReactorKit.View {
         super.viewDidAppear(animated)
         Log.debug("viewDidAppear")
 
-        
-//        let sid = "cq%2BgNZLAImeNH9%2BgwPtxxS95Oo2zm94HtYKX%2F3it8H%2F4zlpSvQRmxtKPtFII8RVkPzVz4KKcCdVPKHkYxMQcvw%3D%3D"
-        let sid = "cq+gNZLAImeNH9+gwPtxxS95Oo2zm94HtYKX/3it8H/4zlpSvQRmxtKPtFII8RVkPzVz4KKcCdVPKHkYxMQcvw=="
-        
-//        a.getMinuDustFrcstDspth(sid: sid)
-//            .subscribe(onNext: { result in
-//                print("@@@@")
-//                print(result)
-//            })
-//            .disposed(by: disposeBag)
-        a.getMinuDustFrcstDspth(sid: sid)
-            .subscribe(onNext: { result in
-                print("@@@@")
-//                print(result)
-//                print(result.response?.body?.items?.count)
-            })
-            .disposed(by: disposeBag)
-        
-        //
-//        a.response?.body?.items?[0].
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -158,6 +140,15 @@ class SplashViewController: UIViewController, ReactorKit.View {
 
 
     func bindAction(_ reactor: SplashViewReactor) {
+        
+        viewDidLoadSubject.asObserver()
+            .map { _ in
+                Log.debug("viewDidLoadSubject map 내부")
+                
+                return Reactor.Action.loadKecoData
+            }
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
         
     }
     

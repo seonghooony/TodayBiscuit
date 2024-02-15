@@ -12,6 +12,8 @@ import RxCocoa
 
 protocol SplashUseCaseProtocol {
     
+    func getAIISMinuDustFrcstDspth() -> Observable<[MinuDustFrcstDspthItem]?>
+    
 }
 
 final class SplashUseCase: SplashUseCaseProtocol {
@@ -26,7 +28,7 @@ final class SplashUseCase: SplashUseCaseProtocol {
         arpltnInforInqireSvcRepository: ArpltnInforInqireSvcRepositoryProtocol,
         msrstnInfoInqireSvcRepository: MsrstnInfoInqireSvcRepositoryProtocol,
         arpltnStatsSvcRepository: ArpltnStatsSvcRepositoryProtocol) {
-        Log.debug("SplashUseCase init")
+        Log.debug("SplashUseCase ₩init")
         
             self.arpltnInforInqireSvcRepository = arpltnInforInqireSvcRepository
             self.msrstnInfoInqireSvcRepository = msrstnInfoInqireSvcRepository
@@ -36,5 +38,17 @@ final class SplashUseCase: SplashUseCaseProtocol {
     deinit {
         disposeBag = DisposeBag()
         Log.debug("SplashUseCase deinit")
+    }
+    
+    func getAIISMinuDustFrcstDspth() -> Observable<[MinuDustFrcstDspthItem]?> {
+        arpltnInforInqireSvcRepository.getMinuDustFrcstDspth()
+            .map { AIISBaseResponse in
+                
+                return AIISBaseResponse.response?.body?.items
+            }
+            .catch { error in
+                
+                return .never()
+            }
     }
 }

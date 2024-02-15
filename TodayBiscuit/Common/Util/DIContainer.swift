@@ -9,27 +9,43 @@ import Foundation
 import Swinject
 
 final class DIContainer {
+    
     static let shared = DIContainer()
     var container: Container = Container()
-    private init(){}
-    func initKecoDIContainer() -> () {
+    
+    
+    private init(){
+        inject()
+    }
+    
+    func inject() {
+        registerDIKecoSvcServices()
+        registerDIKecoRepositories()
+        registerDIUseCase()
+        
+    }
+    
+    
+    private func registerDIKecoSvcServices() {
         self.container.register(ArpltnInforInqireSvcService.self){ _ in
-            ArpltnInforInqireSvcService()
+            return ArpltnInforInqireSvcService()
         }
         
         
         self.container.register(MsrstnInfoInqireSvcService.self){ _ in
-            MsrstnInfoInqireSvcService()
+            return MsrstnInfoInqireSvcService()
         }
         
         
         self.container.register(ArpltnStatsSvcService.self){ _ in
-            ArpltnStatsSvcService()
+            return ArpltnStatsSvcService()
         }
-        
-        
+    }
+    
+    
+    private func registerDIKecoRepositories() {
         self.container.register(ArpltnInforInqireSvcRepositoryProtocol.self){ resolver in
-            ArpltnInforInqireSvcRepository(arpltnInforInqireSvcService: resolver.resolve(ArpltnInforInqireSvcService.self)!)
+            return ArpltnInforInqireSvcRepository(arpltnInforInqireSvcService: resolver.resolve(ArpltnInforInqireSvcService.self)!)
         }
         
         
@@ -41,8 +57,10 @@ final class DIContainer {
         self.container.register(ArpltnStatsSvcRepositoryProtocol.self){ resolver in
             ArpltnStatsSvcRepository(arpltnStatsSvcService: resolver.resolve(ArpltnStatsSvcService.self)!)
         }
-        
-
+    }
+    
+    
+    private func registerDIUseCase() -> () {
         self.container.register(SplashUseCaseProtocol.self){ resolver in
             SplashUseCase(
                 arpltnInforInqireSvcRepository: resolver.resolve(ArpltnInforInqireSvcRepositoryProtocol.self)!,
@@ -51,6 +69,5 @@ final class DIContainer {
             )
         }
         
-           
     }
 }

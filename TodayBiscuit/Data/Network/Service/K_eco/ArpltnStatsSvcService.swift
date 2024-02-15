@@ -14,7 +14,13 @@ import OSLog
 public struct ArpltnStatsSvcService {
     
     /// 측정소별 실시간 일평균 정보 조회
-    func getMsrstnAcctoRDyrg(sid: String) -> Observable<Result<ASSBaseResponse<MsrstnAcctoRDyrgItem>, Error>> {
+    func getMsrstnAcctoRDyrg() -> Observable<Result<ASSBaseResponse<MsrstnAcctoRDyrgItem>, Error>> {
+        
+        guard let sid = Bundle.main.KecoSvcKey_Decoding else {
+            print("K_eco API 키를 로드하지 못했습니다.")
+            return .empty()
+        }
+        
          return Observable.create { observer -> Disposable in
              // Alamofire로 서버와 통신하는 부분이다.
              APIManager.shared.session.request(ArpltnStatsSvcAPI.getMsrstnAcctoRDyrg(sid: sid))
@@ -37,7 +43,13 @@ public struct ArpltnStatsSvcService {
     
     
     /// 측정소별 실시간 월평균 정보 조회
-    func getMsrstnAcctoRMmrg(sid: String) -> Observable<Result<ASSBaseResponse<MsrstnAcctoRMmrgItem>, Error>> {
+    func getMsrstnAcctoRMmrg() -> Observable<Result<ASSBaseResponse<MsrstnAcctoRMmrgItem>, Error>> {
+        
+        guard let sid = Bundle.main.KecoSvcKey_Decoding else {
+            print("K_eco API 키를 로드하지 못했습니다.")
+            return .empty()
+        }
+        
          return Observable.create { observer -> Disposable in
              // Alamofire로 서버와 통신하는 부분이다.
              APIManager.shared.session.request(ArpltnStatsSvcAPI.getMsrstnAcctoRMmrg(sid: sid))
@@ -59,7 +71,13 @@ public struct ArpltnStatsSvcService {
      }
     
     /// 시도별 실시간 평균정보 조회
-    func getCtprvnMesureLIst(sid: String) -> Observable<Result<ASSBaseResponse<CtprvnMesureLIstItem>, Error>> {
+    func getCtprvnMesureLIst() -> Observable<Result<ASSBaseResponse<CtprvnMesureLIstItem>, Error>> {
+        
+        guard let sid = Bundle.main.KecoSvcKey_Decoding else {
+            print("K_eco API 키를 로드하지 못했습니다.")
+            return .empty()
+        }
+        
          return Observable.create { observer -> Disposable in
              // Alamofire로 서버와 통신하는 부분이다.
              APIManager.shared.session.request(ArpltnStatsSvcAPI.getCtprvnMesureLIst(sid: sid))

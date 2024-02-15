@@ -14,8 +14,13 @@ import OSLog
 public struct ArpltnInforInqireSvcService {
 
    /// 대기질예보통보조회
-   func getMinuDustFrcstDspth(sid: String) -> Observable<Result<AIISBaseResponse<MinuDustFrcstDspthItem>, Error>> {
-       print("getMinuDustFrcstDspth22")
+   func getMinuDustFrcstDspth() -> Observable<Result<AIISBaseResponse<MinuDustFrcstDspthItem>, Error>> {
+       
+       guard let sid = Bundle.main.KecoSvcKey_Decoding else {
+           print("K_eco API 키를 로드하지 못했습니다.")
+           return .empty()
+       }
+       
         return Observable.create { observer -> Disposable in
             // Alamofire로 서버와 통신하는 부분이다.
             
@@ -49,7 +54,13 @@ public struct ArpltnInforInqireSvcService {
     
     
     /// 초미세먼지주간예보조회(안쓸예정)
-    func getMinuDustWeekFrcstDspth(sid: String) -> Observable<Result<AIISBaseResponse<MinuDustWeekFrcstDspthItem>, Error>> {
+    func getMinuDustWeekFrcstDspth() -> Observable<Result<AIISBaseResponse<MinuDustWeekFrcstDspthItem>, Error>> {
+        
+        guard let sid = Bundle.main.KecoSvcKey_Decoding else {
+            print("K_eco API 키를 로드하지 못했습니다.")
+            return .empty()
+        }
+        
          return Observable.create { observer -> Disposable in
              // Alamofire로 서버와 통신하는 부분이다.
              APIManager.shared.session.request(ArpltnInforInqireSvcAPI.getMinuDustWeekFrcstDspth(sid: sid))
@@ -72,7 +83,13 @@ public struct ArpltnInforInqireSvcService {
     
     
     /// 측정소별 실시간 측정정보 조회(주 메인)
-    func getCtprvnRltmMesureDnsty(sid: String) -> Observable<Result<AIISBaseResponse<MsrstnAcctoRltmMesureDnstyItem>, Error>> {
+    func getCtprvnRltmMesureDnsty() -> Observable<Result<AIISBaseResponse<MsrstnAcctoRltmMesureDnstyItem>, Error>> {
+        
+        guard let sid = Bundle.main.KecoSvcKey_Decoding else {
+            print("K_eco API 키를 로드하지 못했습니다.")
+            return .empty()
+        }
+        
          return Observable.create { observer -> Disposable in
              // Alamofire로 서버와 통신하는 부분이다.
              APIManager.shared.session.request(ArpltnInforInqireSvcAPI.getCtprvnRltmMesureDnsty(sid: sid))
@@ -95,7 +112,13 @@ public struct ArpltnInforInqireSvcService {
     
     
     /// 통합대기환경지수 나쁨 이상 측정소 목록조회(안쓸예정)
-    func getUnityAirEnvrnIdexSnstiveAboveMsrstnList(sid: String) -> Observable<Result<AIISBaseResponse<UnityAirEnvrnIdexSnstiveAboveMsrstnListItem>, Error>> {
+    func getUnityAirEnvrnIdexSnstiveAboveMsrstnList() -> Observable<Result<AIISBaseResponse<UnityAirEnvrnIdexSnstiveAboveMsrstnListItem>, Error>> {
+        
+        guard let sid = Bundle.main.KecoSvcKey_Decoding else {
+            print("K_eco API 키를 로드하지 못했습니다.")
+            return .empty()
+        }
+        
          return Observable.create { observer -> Disposable in
              // Alamofire로 서버와 통신하는 부분이다.
              APIManager.shared.session.request(ArpltnInforInqireSvcAPI.getUnityAirEnvrnIdexSnstiveAboveMsrstnList(sid: sid))
@@ -118,7 +141,13 @@ public struct ArpltnInforInqireSvcService {
     
     
     /// 시도별 실시간 측정정보 조회 (지도메인)
-    func getMsrstnAcctoRltmMesureDnsty(sid: String) -> Observable<Result<AIISBaseResponse<CtprvnRltmMesureDnstyItem>, Error>> {
+    func getMsrstnAcctoRltmMesureDnsty() -> Observable<Result<AIISBaseResponse<CtprvnRltmMesureDnstyItem>, Error>> {
+        
+        guard let sid = Bundle.main.KecoSvcKey_Decoding else {
+            print("K_eco API 키를 로드하지 못했습니다.")
+            return .empty()
+        }
+        
          return Observable.create { observer -> Disposable in
              // Alamofire로 서버와 통신하는 부분이다.
              APIManager.shared.session.request(ArpltnInforInqireSvcAPI.getMsrstnAcctoRltmMesureDnsty(sid: sid))

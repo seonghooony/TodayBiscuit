@@ -46,4 +46,8 @@ extension Bundle {
 
         return version
     }
+    
+    var KecoSvcKey_Decoding: String? {
+        return infoDictionary?["KecoSvcKey_Decoding"] as? String
+    }
 }

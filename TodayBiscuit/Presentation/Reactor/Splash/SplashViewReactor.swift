@@ -16,12 +16,13 @@ class SplashViewReactor: Reactor {
     
     let initialState: State
     
-    
+    var splashUseCase: SplashUseCaseProtocol?
     
     init() {
         Log.debug("SplashViewReactor init")
         self.initialState = State()
         
+        self.splashUseCase = DIContainer.shared.container.resolve(SplashUseCaseProtocol.self)
     }
     
     deinit {
@@ -30,37 +31,59 @@ class SplashViewReactor: Reactor {
     }
     
     enum Action {
+        case loadKecoData
         
     }
     
     enum Mutation {
-        
+        case setMinuDustFrcstDspthItemList([MinuDustFrcstDspthItem]?)
+        case showError
         
     }
     
     struct State {
-        
+        var minuDustFrcstDspthItemList: [MinuDustFrcstDspthItem] = []
     }
     
     
     func mutate(action: Action) -> Observable<Mutation> {
+        
+        guard let splashUseCase = splashUseCase else { return .never() }
+        
         switch action {
+        case .loadKecoData:
             
+            return Observable.concat([
+                splashUseCase.getAIISMinuDustFrcstDspth()
+                    .map{ minuDustFrcstDspthItemList in
+                        
+                        return Mutation.setMinuDustFrcstDspthItemList(minuDustFrcstDspthItemList)
+                    }
+                    .catchAndReturn(Mutation.showError),
+                
+            
+            ])
+
         }
         
-        func reduce(state: State, mutation: Mutation) -> State {
-            var newState = state
-            
-            
-            switch mutation {
-                
-                
+        
+    }
+    
+    func reduce(state: State, mutation: Mutation) -> State {
+        var newState = state
+        
+        
+        switch mutation {
+        case .setMinuDustFrcstDspthItemList(let minuDustFrcstDspthItemList):
+            if let minuDustFrcstDspthItemList = minuDustFrcstDspthItemList {
+                newState.minuDustFrcstDspthItemList = minuDustFrcstDspthItemList
             }
             
-            return newState
+        default:
+            break
+            
         }
         
-        
-        
+        return newState
     }
 }
