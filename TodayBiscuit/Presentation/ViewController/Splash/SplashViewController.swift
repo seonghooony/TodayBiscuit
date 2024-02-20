@@ -22,9 +22,7 @@ class SplashViewController: UIViewController, ReactorKit.View {
     var disposeBag: DisposeBag = DisposeBag()
 
     typealias Reactor = SplashViewReactor
-        
-    let arpltnInforInqireSvcService = ArpltnInforInqireSvcService()
-    lazy var a = ArpltnInforInqireSvcRepository(arpltnInforInqireSvcService: arpltnInforInqireSvcService)
+    
     let testLbl = UILabel()
     
     var viewDidLoadSubject = PublishSubject<Bool>()
