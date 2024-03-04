@@ -80,10 +80,6 @@ class SplashViewController: UIViewController, ReactorKit.View {
         viewConfigure()
         
         constraintConfigure()
-        
-        
-       
-        
 
     }
     
@@ -91,7 +87,6 @@ class SplashViewController: UIViewController, ReactorKit.View {
         상단 네비게이션 바 초기화
      */
     private func initNavigationBar() {
-        
         
         DispatchQueue.main.async {
             let navigationBarAppearanceDefault = UINavigationBarAppearance()

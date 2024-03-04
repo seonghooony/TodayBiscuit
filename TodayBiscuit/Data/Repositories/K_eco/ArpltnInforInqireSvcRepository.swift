@@ -20,16 +20,24 @@ final class ArpltnInforInqireSvcRepository {
     }
 }
 
+/// 한국환경공단 에어코리아 대기오염정보
 extension ArpltnInforInqireSvcRepository: ArpltnInforInqireSvcRepositoryProtocol {
     
     /// 대기질예보통보조회
-    func getMinuDustFrcstDspth() -> Observable<AIISBaseResponse<MinuDustFrcstDspthItem>> {
+    func getMinuDustFrcstDspth(numOfRows: String? = nil,
+                               pageNo: String? = nil,
+                               searchDate: String? = nil,
+                               InformCode: String? = nil) -> Observable<AIISBaseResponse<MinuDustFrcstDspthItem>> {
         
         let observable = Observable<AIISBaseResponse<MinuDustFrcstDspthItem>>.create { [weak self] observer -> Disposable in
             
             guard let self = self else { return Disposables.create() }
             
-            self.arpltnInforInqireSvcService.getMinuDustFrcstDspth().subscribe (onNext: { result in
+            self.arpltnInforInqireSvcService.getMinuDustFrcstDspth(numOfRows: numOfRows,
+                                                                   pageNo: pageNo,
+                                                                   searchDate: searchDate,
+                                                                   InformCode: InformCode)
+            .subscribe (onNext: { result in
                 switch result {
                 case let .success(result):
                     observer.onNext(result)
@@ -45,13 +53,18 @@ extension ArpltnInforInqireSvcRepository: ArpltnInforInqireSvcRepositoryProtocol
     }
     
     /// 초미세먼지주간예보조회(안쓸예정)
-    func getMinuDustWeekFrcstDspth() -> Observable<AIISBaseResponse<MinuDustWeekFrcstDspthItem>> {
-//        let sid = UserDefaults.standard.string(forKey: "sid") ?? ""
+    func getMinuDustWeekFrcstDspth(numOfRows: String? = nil,
+                                   pageNo: String? = nil,
+                                   searchDate: String? = nil) -> Observable<AIISBaseResponse<MinuDustWeekFrcstDspthItem>> {
+        
         let observable = Observable<AIISBaseResponse<MinuDustWeekFrcstDspthItem>>.create { [weak self] observer -> Disposable in
             
             guard let self = self else { return Disposables.create() }
             
-            self.arpltnInforInqireSvcService.getMinuDustWeekFrcstDspth().subscribe (onNext: { result in
+            self.arpltnInforInqireSvcService.getMinuDustWeekFrcstDspth(numOfRows: numOfRows,
+                                                                       pageNo: pageNo,
+                                                                       searchDate: searchDate)
+            .subscribe (onNext: { result in
                 switch result {
                 case let .success(result):
                     observer.onNext(result)
@@ -68,13 +81,20 @@ extension ArpltnInforInqireSvcRepository: ArpltnInforInqireSvcRepositoryProtocol
     }
     
     /// 측정소별 실시간 측정정보 조회(주 메인)
-    func getCtprvnRltmMesureDnsty() -> Observable<AIISBaseResponse<MsrstnAcctoRltmMesureDnstyItem>> {
-//        let sid = UserDefaults.standard.string(forKey: "sid") ?? ""
-        let observable = Observable<AIISBaseResponse<MsrstnAcctoRltmMesureDnstyItem>>.create { [weak self] observer -> Disposable in
+    func getMsrstnAcctoRltmMesureDnsty(numOfRows: String? = nil,
+                                       pageNo: String? = nil,
+                                       stationName: String? = nil,
+                                       dataTerm: String? = nil) -> Observable<AIISBaseResponse<CtprvnRltmMesureDnstyItem>> {
+        
+        let observable = Observable<AIISBaseResponse<CtprvnRltmMesureDnstyItem>>.create { [weak self] observer -> Disposable in
             
             guard let self = self else { return Disposables.create() }
             
-            self.arpltnInforInqireSvcService.getCtprvnRltmMesureDnsty().subscribe (onNext: { result in
+            self.arpltnInforInqireSvcService.getMsrstnAcctoRltmMesureDnsty(numOfRows: numOfRows,
+                                                                           pageNo: pageNo,
+                                                                           stationName: stationName,
+                                                                           dataTerm: dataTerm)
+            .subscribe (onNext: { result in
                 switch result {
                 case let .success(result):
                     observer.onNext(result)
@@ -91,13 +111,16 @@ extension ArpltnInforInqireSvcRepository: ArpltnInforInqireSvcRepositoryProtocol
     }
     
     /// 통합대기환경지수 나쁨 이상 측정소 목록조회(안쓸예정)
-    func getUnityAirEnvrnIdexSnstiveAboveMsrstnList() -> Observable<AIISBaseResponse<UnityAirEnvrnIdexSnstiveAboveMsrstnListItem>> {
-//        let sid = UserDefaults.standard.string(forKey: "sid") ?? ""
+    func getUnityAirEnvrnIdexSnstiveAboveMsrstnList(numOfRows: String? = nil,
+                                                    pageNo: String? = nil) -> Observable<AIISBaseResponse<UnityAirEnvrnIdexSnstiveAboveMsrstnListItem>> {
+        
         let observable = Observable<AIISBaseResponse<UnityAirEnvrnIdexSnstiveAboveMsrstnListItem>>.create { [weak self] observer -> Disposable in
             
             guard let self = self else { return Disposables.create() }
             
-            self.arpltnInforInqireSvcService.getUnityAirEnvrnIdexSnstiveAboveMsrstnList().subscribe (onNext: { result in
+            self.arpltnInforInqireSvcService.getUnityAirEnvrnIdexSnstiveAboveMsrstnList(numOfRows: numOfRows,
+                                                                                        pageNo: pageNo)
+            .subscribe (onNext: { result in
                 switch result {
                 case let .success(result):
                     observer.onNext(result)
@@ -114,13 +137,18 @@ extension ArpltnInforInqireSvcRepository: ArpltnInforInqireSvcRepositoryProtocol
     }
     
     /// 시도별 실시간 측정정보 조회 (지도메인)
-    func getMsrstnAcctoRltmMesureDnsty() -> Observable<AIISBaseResponse<CtprvnRltmMesureDnstyItem>> {
-//        let sid = UserDefaults.standard.string(forKey: "sid") ?? ""
-        let observable = Observable<AIISBaseResponse<CtprvnRltmMesureDnstyItem>>.create { [weak self] observer -> Disposable in
+    func getCtprvnRltmMesureDnsty(numOfRows: String? = nil,
+                                  pageNo: String? = nil,
+                                  sidoName: String? = nil) -> Observable<AIISBaseResponse<MsrstnAcctoRltmMesureDnstyItem>> {
+        
+        let observable = Observable<AIISBaseResponse<MsrstnAcctoRltmMesureDnstyItem>>.create { [weak self] observer -> Disposable in
             
             guard let self = self else { return Disposables.create() }
             
-            self.arpltnInforInqireSvcService.getMsrstnAcctoRltmMesureDnsty().subscribe (onNext: { result in
+            self.arpltnInforInqireSvcService.getCtprvnRltmMesureDnsty(numOfRows: numOfRows,
+                                                                      pageNo: pageNo,
+                                                                      sidoName: sidoName)
+            .subscribe (onNext: { result in
                 switch result {
                 case let .success(result):
                     observer.onNext(result)
@@ -135,5 +163,6 @@ extension ArpltnInforInqireSvcRepository: ArpltnInforInqireSvcRepositoryProtocol
         }
         return observable
     }
+    
     
 }

@@ -54,7 +54,7 @@ class SplashViewReactor: Reactor {
         case .loadKecoData:
             
             return Observable.concat([
-                splashUseCase.getAIISMinuDustFrcstDspth()
+                splashUseCase.getAIISMinuDustFrcstDspth(searchDate: "2024-02-06")
                     .map{ minuDustFrcstDspthItemList in
                         
                         return Mutation.setMinuDustFrcstDspthItemList(minuDustFrcstDspthItemList)

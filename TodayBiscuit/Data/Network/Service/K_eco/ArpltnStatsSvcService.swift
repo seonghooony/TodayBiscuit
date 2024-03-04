@@ -14,16 +14,19 @@ import OSLog
 public struct ArpltnStatsSvcService {
     
     /// 측정소별 실시간 일평균 정보 조회
-    func getMsrstnAcctoRDyrg() -> Observable<Result<ASSBaseResponse<MsrstnAcctoRDyrgItem>, Error>> {
-        
-        guard let sid = Bundle.main.KecoSvcKey_Decoding else {
-            print("K_eco API 키를 로드하지 못했습니다.")
-            return .empty()
-        }
+    func getMsrstnAcctoRDyrg(numOfRows: String? = nil,
+                             pageNo: String? = nil,
+                             inqBginDt: String? = nil,
+                             inqEndDt: String? = nil,
+                             msrstnName: String? = nil) -> Observable<Result<ASSBaseResponse<MsrstnAcctoRDyrgItem>, Error>> {
         
          return Observable.create { observer -> Disposable in
              // Alamofire로 서버와 통신하는 부분이다.
-             APIManager.shared.session.request(ArpltnStatsSvcAPI.getMsrstnAcctoRDyrg(sid: sid))
+             APIManager.shared.session.request(ArpltnStatsSvcAPI.getMsrstnAcctoRDyrg(numOfRows: numOfRows,
+                                                                                     pageNo: pageNo,
+                                                                                     inqBginDt: inqBginDt,
+                                                                                     inqEndDt: inqEndDt,
+                                                                                     msrstnName: msrstnName))
                  .validate(statusCode: 200..<300) // 200~300 사이 상태코드만 허용
                  .validate(contentType:["application/json"]) // JSON 포맷만 허용
                  .responseDecodable(of: ASSBaseResponse<MsrstnAcctoRDyrgItem>.self) { response in
@@ -43,16 +46,19 @@ public struct ArpltnStatsSvcService {
     
     
     /// 측정소별 실시간 월평균 정보 조회
-    func getMsrstnAcctoRMmrg() -> Observable<Result<ASSBaseResponse<MsrstnAcctoRMmrgItem>, Error>> {
-        
-        guard let sid = Bundle.main.KecoSvcKey_Decoding else {
-            print("K_eco API 키를 로드하지 못했습니다.")
-            return .empty()
-        }
+    func getMsrstnAcctoRMmrg(numOfRows: String? = nil,
+                             pageNo: String? = nil,
+                             inqBginMm: String? = nil,
+                             inqEndMm: String? = nil,
+                             msrstnName: String? = nil) -> Observable<Result<ASSBaseResponse<MsrstnAcctoRMmrgItem>, Error>> {
         
          return Observable.create { observer -> Disposable in
              // Alamofire로 서버와 통신하는 부분이다.
-             APIManager.shared.session.request(ArpltnStatsSvcAPI.getMsrstnAcctoRMmrg(sid: sid))
+             APIManager.shared.session.request(ArpltnStatsSvcAPI.getMsrstnAcctoRMmrg(numOfRows: numOfRows,
+                                                                                     pageNo: pageNo,
+                                                                                     inqBginMm: inqBginMm,
+                                                                                     inqEndMm: inqEndMm,
+                                                                                     msrstnName: msrstnName))
                  .validate(statusCode: 200..<300) // 200~300 사이 상태코드만 허용
                  .validate(contentType:["application/json"]) // JSON 포맷만 허용
                  .responseDecodable(of: ASSBaseResponse<MsrstnAcctoRMmrgItem>.self) { response in
@@ -71,16 +77,19 @@ public struct ArpltnStatsSvcService {
      }
     
     /// 시도별 실시간 평균정보 조회
-    func getCtprvnMesureLIst() -> Observable<Result<ASSBaseResponse<CtprvnMesureLIstItem>, Error>> {
-        
-        guard let sid = Bundle.main.KecoSvcKey_Decoding else {
-            print("K_eco API 키를 로드하지 못했습니다.")
-            return .empty()
-        }
+    func getCtprvnMesureLIst(numOfRows: String? = nil,
+                             pageNo: String? = nil,
+                             itemCode: String? = nil,
+                             dataGubun: String? = nil,
+                             searchCondition: String? = nil) -> Observable<Result<ASSBaseResponse<CtprvnMesureLIstItem>, Error>> {
         
          return Observable.create { observer -> Disposable in
              // Alamofire로 서버와 통신하는 부분이다.
-             APIManager.shared.session.request(ArpltnStatsSvcAPI.getCtprvnMesureLIst(sid: sid))
+             APIManager.shared.session.request(ArpltnStatsSvcAPI.getCtprvnMesureLIst(numOfRows: numOfRows,
+                                                                                     pageNo: pageNo,
+                                                                                     itemCode: itemCode,
+                                                                                     dataGubun: dataGubun,
+                                                                                     searchCondition: searchCondition))
                  .validate(statusCode: 200..<300) // 200~300 사이 상태코드만 허용
                  .validate(contentType:["application/json"]) // JSON 포맷만 허용
                  .responseDecodable(of: ASSBaseResponse<CtprvnMesureLIstItem>.self) { response in

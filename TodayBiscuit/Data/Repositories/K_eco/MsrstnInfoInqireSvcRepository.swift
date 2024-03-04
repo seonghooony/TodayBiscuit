@@ -23,13 +23,20 @@ final class MsrstnInfoInqireSvcRepository {
 
 extension MsrstnInfoInqireSvcRepository: MsrstnInfoInqireSvcRepositoryProtocol {
     /// 측정소별 실시간 측정정보 조회(주 메인)
-    func getMsrstnList() -> Observable<MIISBaseResponse<MsrstnListItem>> {
-        let sid = UserDefaults.standard.string(forKey: "sid") ?? ""
+    func getMsrstnList(numOfRows: String? = nil,
+                       pageNo: String? = nil,
+                       addr: String? = nil,
+                       stationName: String? = nil) -> Observable<MIISBaseResponse<MsrstnListItem>> {
+        
         let observable = Observable<MIISBaseResponse<MsrstnListItem>>.create { [weak self] observer -> Disposable in
             
             guard let self = self else { return Disposables.create() }
             
-            self.msrstnInfoInqireSvcService.getMsrstnList().subscribe (onNext: { result in
+            self.msrstnInfoInqireSvcService.getMsrstnList(numOfRows: numOfRows, 
+                                                          pageNo: pageNo,
+                                                          addr: addr,
+                                                          stationName: stationName)
+            .subscribe (onNext: { result in
                 switch result {
                 case let .success(result):
                     observer.onNext(result)
@@ -47,13 +54,16 @@ extension MsrstnInfoInqireSvcRepository: MsrstnInfoInqireSvcRepositoryProtocol {
     
     
     /// 근접측정소 목록 조회
-    func getNearbyMsrstnList() -> Observable<MIISBaseResponse<NearbyMsrstnListItem>> {
-        let sid = UserDefaults.standard.string(forKey: "sid") ?? ""
+    func getNearbyMsrstnList(tmX: String? = nil,
+                             tmY: String? = nil) -> Observable<MIISBaseResponse<NearbyMsrstnListItem>> {
+        
         let observable = Observable<MIISBaseResponse<NearbyMsrstnListItem>>.create { [weak self] observer -> Disposable in
             
             guard let self = self else { return Disposables.create() }
             
-            self.msrstnInfoInqireSvcService.getNearbyMsrstnList().subscribe (onNext: { result in
+            self.msrstnInfoInqireSvcService.getNearbyMsrstnList(tmX: tmX,
+                                                                tmY: tmY)
+            .subscribe (onNext: { result in
                 switch result {
                 case let .success(result):
                     observer.onNext(result)
@@ -71,13 +81,18 @@ extension MsrstnInfoInqireSvcRepository: MsrstnInfoInqireSvcRepositoryProtocol {
     
     
     /// TM 기준좌표 조회
-    func getTMStdrCrdnt() -> Observable<MIISBaseResponse<TMStdrCrdntItem>> {
-        let sid = UserDefaults.standard.string(forKey: "sid") ?? ""
+    func getTMStdrCrdnt(numOfRows: String? = nil,
+                        pageNo: String? = nil,
+                        umdName: String? = nil) -> Observable<MIISBaseResponse<TMStdrCrdntItem>> {
+        
         let observable = Observable<MIISBaseResponse<TMStdrCrdntItem>>.create { [weak self] observer -> Disposable in
             
             guard let self = self else { return Disposables.create() }
             
-            self.msrstnInfoInqireSvcService.getTMStdrCrdnt().subscribe (onNext: { result in
+            self.msrstnInfoInqireSvcService.getTMStdrCrdnt(numOfRows: numOfRows,
+                                                           pageNo: pageNo,
+                                                           umdName: umdName)
+            .subscribe (onNext: { result in
                 switch result {
                 case let .success(result):
                     observer.onNext(result)

@@ -12,8 +12,20 @@ import RxCocoa
 
 protocol SplashUseCaseProtocol {
     
-    func getAIISMinuDustFrcstDspth() -> Observable<[MinuDustFrcstDspthItem]?>
+    func getAIISMinuDustFrcstDspth(numOfRows: String?,
+                                   pageNo: String?,
+                                   searchDate: String?,
+                                   InformCode: String?) -> Observable<[MinuDustFrcstDspthItem]?>
     
+}
+
+extension SplashUseCaseProtocol {
+    func getAIISMinuDustFrcstDspth(numOfRows: String? = nil,
+                                   pageNo: String? = nil,
+                                   searchDate: String? = nil,
+                                  InformCode: String? = nil) -> Observable<[MinuDustFrcstDspthItem]?> {
+        getAIISMinuDustFrcstDspth(numOfRows: numOfRows, pageNo: pageNo, searchDate: searchDate, InformCode: InformCode)
+    }
 }
 
 final class SplashUseCase: SplashUseCaseProtocol {
@@ -40,8 +52,14 @@ final class SplashUseCase: SplashUseCaseProtocol {
         Log.debug("SplashUseCase deinit")
     }
     
-    func getAIISMinuDustFrcstDspth() -> Observable<[MinuDustFrcstDspthItem]?> {
-        arpltnInforInqireSvcRepository.getMinuDustFrcstDspth()
+    func getAIISMinuDustFrcstDspth(numOfRows: String? = nil,
+                                   pageNo: String? = nil,
+                                   searchDate: String? = nil,
+                                   InformCode: String? = nil) -> Observable<[MinuDustFrcstDspthItem]?> {
+        arpltnInforInqireSvcRepository.getMinuDustFrcstDspth(numOfRows: numOfRows,
+                                                             pageNo: pageNo,
+                                                             searchDate: searchDate,
+                                                             InformCode: InformCode)
             .map { AIISBaseResponse in
                 
                 return AIISBaseResponse.response?.body?.items

@@ -14,16 +14,17 @@ import OSLog
 
 public struct MsrstnInfoInqireSvcService {
     /// 측정소별 실시간 측정정보 조회(주 메인)
-    func getMsrstnList() -> Observable<Result<MIISBaseResponse<MsrstnListItem>, Error>> {
-        
-        guard let sid = Bundle.main.KecoSvcKey_Decoding else {
-            print("K_eco API 키를 로드하지 못했습니다.")
-            return .empty()
-        }
+    func getMsrstnList(numOfRows: String? = nil,
+                       pageNo: String? = nil,
+                       addr: String? = nil,
+                       stationName: String? = nil) -> Observable<Result<MIISBaseResponse<MsrstnListItem>, Error>> {
         
          return Observable.create { observer -> Disposable in
              // Alamofire로 서버와 통신하는 부분이다.
-             APIManager.shared.session.request(MsrstnInfoInqireSvcAPI.getMsrstnList(sid: sid))
+             APIManager.shared.session.request(MsrstnInfoInqireSvcAPI.getMsrstnList(numOfRows: numOfRows,
+                                                                                    pageNo: pageNo,
+                                                                                    addr: addr,
+                                                                                    stationName: stationName))
                  .validate(statusCode: 200..<300) // 200~300 사이 상태코드만 허용
                  .validate(contentType:["application/json"]) // JSON 포맷만 허용
                  .responseDecodable(of: MIISBaseResponse<MsrstnListItem>.self) { response in
@@ -42,16 +43,13 @@ public struct MsrstnInfoInqireSvcService {
      }
     
     /// 근접측정소 목록 조회
-    func getNearbyMsrstnList() -> Observable<Result<MIISBaseResponse<NearbyMsrstnListItem>, Error>> {
-        
-        guard let sid = Bundle.main.KecoSvcKey_Decoding else {
-            print("K_eco API 키를 로드하지 못했습니다.")
-            return .empty()
-        }
+    func getNearbyMsrstnList(tmX: String? = nil,
+                             tmY: String? = nil) -> Observable<Result<MIISBaseResponse<NearbyMsrstnListItem>, Error>> {
         
          return Observable.create { observer -> Disposable in
              // Alamofire로 서버와 통신하는 부분이다.
-             APIManager.shared.session.request(MsrstnInfoInqireSvcAPI.getNearbyMsrstnList(sid: sid))
+             APIManager.shared.session.request(MsrstnInfoInqireSvcAPI.getNearbyMsrstnList(tmX: tmX,
+                                                                                          tmY: tmY))
                  .validate(statusCode: 200..<300) // 200~300 사이 상태코드만 허용
                  .validate(contentType:["application/json"]) // JSON 포맷만 허용
                  .responseDecodable(of: MIISBaseResponse<NearbyMsrstnListItem>.self) { response in
@@ -70,16 +68,15 @@ public struct MsrstnInfoInqireSvcService {
      }
     
     /// TM 기준좌표 조회
-    func getTMStdrCrdnt() -> Observable<Result<MIISBaseResponse<TMStdrCrdntItem>, Error>> {
-        
-        guard let sid = Bundle.main.KecoSvcKey_Decoding else {
-            print("K_eco API 키를 로드하지 못했습니다.")
-            return .empty()
-        }
+    func getTMStdrCrdnt(numOfRows: String? = nil,
+                        pageNo: String? = nil,
+                        umdName: String? = nil) -> Observable<Result<MIISBaseResponse<TMStdrCrdntItem>, Error>> {
         
          return Observable.create { observer -> Disposable in
              // Alamofire로 서버와 통신하는 부분이다.
-             APIManager.shared.session.request(MsrstnInfoInqireSvcAPI.getTMStdrCrdnt(sid: sid))
+             APIManager.shared.session.request(MsrstnInfoInqireSvcAPI.getTMStdrCrdnt(numOfRows: numOfRows,
+                                                                                     pageNo: pageNo,
+                                                                                     umdName: umdName))
                  .validate(statusCode: 200..<300) // 200~300 사이 상태코드만 허용
                  .validate(contentType:["application/json"]) // JSON 포맷만 허용
                  .responseDecodable(of: MIISBaseResponse<TMStdrCrdntItem>.self) { response in
